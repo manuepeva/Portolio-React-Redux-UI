@@ -1,0 +1,25 @@
+.banner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.imgBanner{
+    width: 30%;
+    margin-top: 9vh;
+}
+.bannerT{
+    margin-top: 9vh;
+}
+.AttentionG img{
+    width: 3%;
+    animation: move 1s infinite alternate;
+}
+@keyframes move{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
