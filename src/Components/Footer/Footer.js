@@ -3,7 +3,7 @@ import footer from '../../img/footer.png'
 
 const Footer = () => {
     return (
-        <div>
+        <div className="footerImg">
             <img src={footer} alt="Footer Image"></img>            
         </div>
     )

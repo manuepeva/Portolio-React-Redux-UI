@@ -1,0 +1,31 @@
+.projects {
+  height: 28vh;
+  background-color: #ececec;
+  padding-right: 6%;
+  padding-left: 2%;
+}
+.projects img {
+  border-radius: 5%;
+}
+.column.projec1 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.column.projec2 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.column.projec1 div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.column.projec2 div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}

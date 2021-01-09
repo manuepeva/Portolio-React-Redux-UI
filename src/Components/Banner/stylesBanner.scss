@@ -1,18 +1,27 @@
 .banner{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.banner div {
+    margin-top: 10vh;
+}
+.bannerT h1 {
+    font-size: 3em;
+    margin-top: -2px;
 }
 .imgBanner{
     width: 30%;
-    margin-top: 9vh;
 }
-.bannerT{
-    margin-top: 9vh;
+.divImg{
+    vertical-align: top;
+}
+.subTitle {
+    padding-top: 2vh;
 }
 .AttentionG img{
-    width: 3%;
+    width: 6vh;
     animation: move 1s infinite alternate;
 }
 @keyframes move{

@@ -1,13 +1,29 @@
-#root, *, *::after, *::before, html{
+@import "./Components/Navigation/NavigationStyles.scss";
+@import "./Components/ReduxCom/ReduxCompStyles.scss";
+@import "./Components//ReduxCom/Drops/DropsStyles.scss";
+@import "./Components/Footer/FooterStyles.scss";
+@import "./Components/Projects/ProjectsStyles.scss";
+@import "./Components/Cta/CtaStyles.scss";
+#root,
+*,
+*::after,
+*::before,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Roboto, sans-serif;
 }
-.landingP{
+.landingP {
   text-align: center;
   display: flex;
   flex-direction: column;
   margin-left: 3%;
   margin-right: 3%;
 }
-
+.redux-section {
+  background-image: url("./img/reduxComp.png");
+  height: 70vh;
+  padding-right: 3%;
+  padding-left: 3%;
+}

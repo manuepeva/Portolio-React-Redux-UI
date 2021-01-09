@@ -1,0 +1,47 @@
+.reduxImg {
+  height: 100%;
+  margin: 0 3%;
+  display: flex;
+  flex-direction: column;
+}
+.reduxImg img {
+  max-width: 100%;
+}
+.reduxImg.reduxRows {
+  padding-top: 9vh;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+.reduxImg .row {
+  height: 50%;
+  margin-top: 9vh;
+}
+.reduxRows div {
+  align-content: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+.btn-redux {
+  padding: 2vh;
+  height: 7vh;
+  margin: 5% 13%;
+  border-radius: 4vh;
+  border: none;
+  width: 26vh;
+}
+.btn-container {
+  justify-content: center;
+  align-content: center;
+}
