@@ -1,53 +1,35 @@
 import React from "react"
 import './index.scss'
-import Header from "./Components/Header/Header"
-import Banner from './Components/Banner/Banner'
-import ReduxCom from "./Components/ReduxCom/ReduxCom"
-import Footer from './Components/Footer/Footer'
+import store from './Redux/store'
+import { Provider } from 'react-redux'
+import Login from "./Components/Login/Login"
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom"
-import ProjectsCmp from "./Components/Projects/ProjectsCmp"
+import Projects from "./Components/ProyectsPage/Projects"
 import Education from "./Components/Education/Education"
-import store from './Redux/store'
-import { Provider } from 'react-redux'
-import CallToAction from "./Components/Cta/CallToAction"
-import Projects from './Components/ProyectsPage/Projects'
+import Contact from './Components/Contact/Contact'
+import Ubication from './Components/Location/Ubication'
+import Header from "./Components/Header/Header"
+import Footer from "./Components/Footer/Footer"
 
 function App() {
   return (
     <Provider
       store={store}
     >
-      <div>
-        <Router>
-          <Route exact path="/">
-            <div className="landingP">
-              <Header />
-              <Banner />
-            </div>
-          </Route>
-          <Route exact path="/">
-            <div className="redux-section">
-              <ReduxCom />
-            </div>
-            <ProjectsCmp />
-            <CallToAction />
-          </Route>
-        </Router>
-      </div>
-      <Footer />
       <Router>
+        <Header />
         <Switch>
-          <Route path="/Projects">
-            <Projects />
-          </Route>
-          <Route path="/Education">
-            <Education />
-          </Route>
+          <Route exact path={"/"} component={Login}/>
+          <Route exact path={"/projects"} component={Projects}/>
+          <Route exact path={"/education"} component={Education}/>
+          <Route exact path={"/location"} component={Ubication}/>
+          <Route exact path={"/contact"} component={Contact}/>
         </Switch>
+        <Footer />
       </Router>
     </Provider >
   );
