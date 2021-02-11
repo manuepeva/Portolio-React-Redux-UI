@@ -7,7 +7,7 @@ Frontend created using create-react-app, node-sass, Redux, Material-UI, Webpack,
 Objective: Provide a Portfolio interface where the user can easely navigate and search for information, and allow users to
 send a contact form, managed in the backend with MongoDB and ExpressJS.
 
-[![Header](https://raw.githubusercontent.com/manuepeva/ChatAppReactJS/master/chatjs.png "Header")](https://raw.githubusercontent.com/manuepeva/ChatAppReactJS/master/chatjs.png)
+[![Header](https://raw.githubusercontent.com/manuepeva/Portolio-React-Redux-UI/master/Portfolio.png "Header")](https://raw.githubusercontent.com/manuepeva/Portolio-React-Redux-UI/master/Portfolio.png)
 
 ![](https://img.shields.io/badge/CODE-HTML-informational?style=flat&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/CODE-CSS-informational?style=flat&logoColor=white&color=2bbc8a)
