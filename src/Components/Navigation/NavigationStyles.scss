@@ -10,7 +10,7 @@
 .header-links{
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .header-links > li{
     margin: 2rem 1rem;
@@ -28,6 +28,7 @@ li:last-of-type{
 .logo{
     display: flex;
     width: 100%;
+    justify-content: flex-start;
 }
 .logo p{
     display: flex;
@@ -54,6 +55,30 @@ li:last-of-type{
 #menu, .exit-btn{
     display: none;
 }
+.header-links-mob{
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: left;
+    background:#0e346d;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1;
+    a{
+        color: white;
+        padding: 1%;
+    }
+    li{
+        margin: 6%;
+        font-size: 5vh;
+    }
+    li:hover{
+        background-color: rgb(79, 80, 83);
+    }
+}
 // Media queries
 
 @media(max-width: 768px){
@@ -61,10 +86,11 @@ li:last-of-type{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
-    // .hide-desktop{
-    //     display: none;
-    // }
+    .hide-desktop{
+        display: none;
+    }
     .mobile-view{
         margin-top: 2%;
         display: none;
@@ -72,6 +98,7 @@ li:last-of-type{
     #menu, .exit-btn{
         display: flex;
         color: white;
+        align-content: flex-start;
     }
     .container{
         margin-top: 3vh;
@@ -79,19 +106,6 @@ li:last-of-type{
     }
     .banner img{
         width: 56%;
-    }
-    .header-links{
-        position: fixed;
-        width: 60%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        text-align: left;
-        background: rgb(36,41,44);
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        display: none;
     }
     .header-links a{
         color: white;
@@ -104,8 +118,7 @@ li:last-of-type{
     .header-links li:hover{
         background-color: rgb(79, 80, 83);
     }
-    .header-links:hover{
-        display: block;
-        background-color: red;
+    .header-links{
+        display: none;
     }
 }

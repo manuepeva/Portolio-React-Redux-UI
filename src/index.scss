@@ -1,9 +1,14 @@
 @import "./Components/Navigation/NavigationStyles.scss";
-@import "./Components/ReduxCom/ReduxCompStyles.scss";
-@import "./Components//ReduxCom/Drops/DropsStyles.scss";
 @import "./Components/Footer/FooterStyles.scss";
 @import "./Components/Projects/ProjectsStyles.scss";
 @import "./Components/Cta/CtaStyles.scss";
+@import "./Components/BattleComp/ReduxCompStyles.scss";
+@import "./Components/ProyectsPage/ProjectsStyles.scss";
+@import "./Components/Education/EducationStyles.scss";
+@import "./Components/Contact/ContactStyles.scss";
+@import "./Components/BattleComp/BattleCompStyles.scss";
+@import "./Components/Error/ErrorStyles.scss";
+@import "./Components//GitRepo//GitRepoStyles.scss";
 #root,
 *,
 *::after,
@@ -26,4 +31,8 @@ html {
   height: 70vh;
   padding-right: 3%;
   padding-left: 3%;
+  background-repeat: no-repeat;
+}
+.footer-component{
+  max-height: 100%;
 }

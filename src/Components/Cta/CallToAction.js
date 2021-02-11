@@ -1,17 +1,17 @@
-import React from 'react'
-import {Button} from '@material-ui/core'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
-    return (
-        <div className="row cta">
-            <div className="column">
-                Contact Me
-            </div>
-            <div className="column">
-                <Button>Email</Button>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="row cta">
+      <div className="column column-cta">Contact Me</div>
+      <div className="column">
+        <Link id="button-cta" to="/contact">
+          Email
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-export default CallToAction
+export default CallToAction;

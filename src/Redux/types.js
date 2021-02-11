@@ -1,2 +1,4 @@
-export const LET_WATER_RUN = 'LET_WATER_RUN'
-export const STOP_WATER = 'STOP_WATER'
+export const SHOOT_INVADERS = 'SHOOT_INVADERS'
+// Logo click event
+export const LOGO_CLICK = 'LOGO_CLICK'
+export const SEND_FORM = 'SEND_FORM'

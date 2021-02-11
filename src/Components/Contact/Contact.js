@@ -1,11 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import Form from "../Form/Form";
 const Contact = () => {
-    return (
-        <div>
-            Contact..
-        </div>
-    )
-}
+  return (
+    <div className="contact-form">
+      <Form />
+    </div>
+  );
+};
 
-export default Contact
+export default Contact;

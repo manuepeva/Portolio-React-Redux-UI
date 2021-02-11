@@ -1,6 +1,5 @@
 import {
-    LET_WATER_RUN,
-    STOP_WATER
+    SHOOT_INVADERS,
 } from './types'
 
 const initialState = {
@@ -10,7 +9,7 @@ const initialState = {
 
 export const waterFlow = (state = initialState, action) =>  {
     switch(action.type){
-        case LET_WATER_RUN:
+        case SHOOT_INVADERS:
             return {
                 waterRun: action.payload
             }
