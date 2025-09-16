@@ -1,8 +1,8 @@
 import React from 'react'
-import proj1 from '../../../utils/img/chatjs.png'
-import proj2 from '../../../utils/img/expensetrack.png'
-import proj3 from '../../../utils/img/bbad.png'
-import proj4 from '../../../utils/img/mern-tasks.png'
+import weatherAPI from '../../../utils/img/weatherAPI.png'
+import cryptoAPI from '../../../utils/img/cryptoAPI.png'
+import drinksAPI from '../../../utils/img/drinksAPI.png'
+import carInsuranceAPI from '../../../utils/img/carInsuraceAPI.png'
 import './ProjectsSection.scss'
 const ProjectsSection = () => {
     return (
@@ -10,23 +10,21 @@ const ProjectsSection = () => {
             <div className="row projects">
                 <div className="column projec1">
                     <div>
-                        <a href="https://angry-khorana-8b4a9d.netlify.app/"><img src={proj1} alt="Project"></img></a>
+                        <a href="https://confident-swartz-a9b1cc.netlify.app/"><img src={weatherAPI} alt="Project"></img></a>
                     </div>
                     <div className="projects-text">
-                        <h3>Chat App ReactJS</h3>
-                        <p>Objective: Provide a chat interface where user can choose a username and a room
-                        and then loggin and see other chat users. MERN Project.
+                        <h3>Weather API</h3>
+                        <p>Objective: Provide a chat interface where user can search for a city and country and get its current weather
                     </p> 
                     </div>
                 </div>
                 <div className="column projec2">
                     <div>
-                    <a href="https://nostalgic-saha-d76d63.netlify.app/"><img src={proj2} alt="Project"></img></a>
+                    <a href="https://gracious-spence-3edb13.netlify.app/"><img src={cryptoAPI} alt="Project"></img></a>
                     </div>
                     <div className="projects-text">
-                        <h3>Title: Expense Tracker ReactJS</h3>
-                        <p>Objective: Create an interface where user can add and delete
-                        as well as see his current balance. MERN Project.
+                        <h3>Crypto currency API</h3>
+                        <p>Objective: Provide a user interface where user can search for its favorite crypto currency and get its current value
                     </p>
                     </div>
                 </div>
@@ -34,23 +32,21 @@ const ProjectsSection = () => {
             <div className="row projects">
                 <div className="column projec1">
                     <div>
-                        <a href="https://manuepeva.github.io/API---Breaking-Bad-Series-/"><img src={proj3} alt="Project"></img></a>
+                        <a href="https://sleepy-ptolemy-aef1d2.netlify.app/"><img src={drinksAPI} alt="Project"></img></a>
                     </div>
                     <div className="projects-text">
-                        <h3>Title: Breaking Bad API</h3>
-                        <p>Objective: Provide a user interface where user can search for a character from the
-                        Tv series.
+                        <h3>Searc you drink API</h3>
+                        <p>Objective: Provide a user interface where user can search for its favorite drinks
                 </p>
                     </div>
                 </div>
                 <div className="column projec2">
                     <div>
-                        <a href="https://vibrant-swartz-1dfb19.netlify.app/"><img src={proj4} alt="Project"></img></a>
+                        <a href="https://pensive-tesla-643283.netlify.app/"><img src={carInsuranceAPI} alt="Project"></img></a>
                     </div>
                     <div className="projects-text">
-                        <h3>Title: Tasks Manager</h3>
-                        <p>Objective: Create an interface where user can add, delete, edit and
-                        update his projects and tasks. MERN Project.</p>
+                        <h3>Car Insurance API</h3>
+                        <p>Objective: Provide an user interface where the user can search for a car insurance</p>
                     </div>
                 </div>
             </div>

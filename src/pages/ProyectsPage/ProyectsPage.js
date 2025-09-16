@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import {getGithubRepos} from '../../api/githubApi'
 import {
   Card,
   CardActionArea,
@@ -11,31 +11,27 @@ import {
   Grid,
   Link,
 } from "@mui/material";
+import { secrets } from "../../../secrets/secrets";
 
 const Projects = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+useEffect(() => {
     const username = "manuepeva";
-    const token = "68211527d2c119adcf22fef7296363273de4ca5d"; // OJO: evita poner tokens en el front
-    const headers = {
-      Authorization: `Basic ${btoa(`${username}:${token}`)}`,
-    };
 
-    const getGithubInfo = async () => {
+    const fetchData = async () => {
       try {
-        const url = `https://api.github.com/users/${username}/repos?per_page=100&sort=asc`;
-        const response = await axios.get(url, { headers });
-        setCards(response.data);
+        const repos = await getGithubRepos(username, secrets);
+        setCards(repos);
       } catch (err) {
-        console.error("Error fetching GitHub data:", err);
+        console.error(err);
       } finally {
         setLoading(false);
       }
     };
 
-    getGithubInfo();
+    fetchData();
   }, []);
 
   return (
