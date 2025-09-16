@@ -1,4 +1,4 @@
-import axiosClient from "../api/axiosClient";
+import axiosClient from "../api/AxiosClient.js";
 import { SEND_FORM } from "./types";
 
 export const sendFormData = (data) => async (dispatch) => {
