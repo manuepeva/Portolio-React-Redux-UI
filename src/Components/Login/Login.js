@@ -1,22 +1,22 @@
 import React from "react";
-import ProjectsCmp from "../Projects/ProjectsCmp";
-import CallToAction from "../Cta/CallToAction";
-import Banner from "../Banner/Banner";
-import ReduxCom from "../BattleComp/ReduxCom";
-import GitRepo from "../GitRepo/GitRepo";
+import ProjectsSection from "../ProjectsSection/ProjectsSection";
+import ContactCallToAction from "../ContactCallToAction/ContactCallToAction";
+import HeroSection from "../HeroSection/HeroSection";
+import SpaceInvadersGame from "../SpaceInvadersGame/SpaceInvadersGame";
+import PortfolioRepoLink from "../PortfolioRepoLink/PortfolioRepoLink";
 
 const Login = () => {
   return (
     <div className="login-container">
       <div className="landingP">
-        <Banner />
+        <HeroSection />
       </div>
-      <div className="redux-section">
-        <ReduxCom />
+      <div className="space-invaders-section">
+        <SpaceInvadersGame />
       </div>
-      <ProjectsCmp />
-      <GitRepo />
-      <CallToAction />
+      <ProjectsSection />
+      <PortfolioRepoLink />
+      <ContactCallToAction />
     </div>
   );
 };

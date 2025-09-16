@@ -1,27 +1,30 @@
-import Navigation from "../Navigation/Navigation";
-import React from "react";
-import logo from "../../img/mpv.png";
-import ham from "../../img/ham.png";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import NavigationBar from "../NavigationBar/NavigationBar";
 import { clickOverLogo } from "../../Redux/LogoEventAction";
-import { useState } from "react";
+import logo from "../../../utils/img/mpv.png";
+import ham from "../../../utils/img/ham.png";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
-  const ClickOnLogo = () => dispatch(clickOverLogo());
-  const HandleClickLogo = (e) => {
+  const navigate = useNavigate();
+
+  // Acción al hacer clic en el logo
+  const handleClickLogo = (e) => {
     e.preventDefault();
-    ClickOnLogo();
+    dispatch(clickOverLogo("/"));
+    navigate("/");
   };
-  const handleClickToggle = () => {
-    setToggle(!toggle);
-  };
+
+  // Toggle del menú móvil
+  const handleClickToggle = () => setToggle(!toggle);
 
   return (
     <div className="container hide-container">
       <div className="logo">
-        <p onClick={HandleClickLogo}>Manuel Pérez</p>
+        <p onClick={handleClickLogo}>Manuel Pérez</p>
         <img src={logo} alt="Logo MPV" />
         <img
           src={ham}
@@ -29,9 +32,9 @@ const Header = () => {
           className="menu"
           id="menu"
           onClick={handleClickToggle}
-        ></img>
+        />
       </div>
-      <Navigation toggle={toggle} />
+      <NavigationBar toggle={toggle} />
     </div>
   );
 };

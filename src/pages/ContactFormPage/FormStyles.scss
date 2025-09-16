@@ -1,0 +1,103 @@
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 3vh 2vw;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.form-main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-title {
+  font-size: 2rem;
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  width: 100%;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.input-name,
+.input-lastName,
+.input-date,
+.txt-area {
+  font-size: 1rem;
+  padding: 0.7em 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.3em;
+  background: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.txt-area {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.btn-form {
+  padding: 0.7em 2em;
+  background: #0e346d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1.5em;
+  align-self: center;
+  transition: background 0.2s;
+}
+
+.btn-form:hover {
+  background: #1b4d99;
+}
+
+.success {
+  color: #22b455;
+  text-align: center;
+  margin-top: 1em;
+}
+
+// Tablet
+@media (max-width: 900px) {
+  .form-container {
+    max-width: 98vw;
+    padding: 3vh 2vw;
+  }
+  .form-title {
+    font-size: 1.4rem;
+  }
+}
+
+// Móvil
+@media (max-width: 600px) {
+  .form-container {
+    padding: 2vh 1vw;
+  }
+  .form-title {
+    font-size: 1.1rem;
+  }
+  .btn-form {
+    font-size: 1rem;
+    width: 100%;
+  }
+}

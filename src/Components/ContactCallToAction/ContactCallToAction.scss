@@ -1,0 +1,50 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4vh;
+}
+
+.cta {
+  height: 45vh;
+}
+.row.cta {
+    background-color: #fafafa;
+    padding: 7vh 0;
+}
+#button-cta {
+  padding: 2vh 10vh;
+  border-radius: 4vh;
+  border: none;
+  width: 26vh;
+  background-color: #0e346d;
+  color: white;
+  font-size: 2.2vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.column-cta {
+  font-size: 4vh;
+  font-weight: 700;
+}
+/* --- Responsive Handy / Mobile (<=600px) --- */
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+    gap: 6vh;
+  }
+  .cta {
+    height: auto;
+  }
+  #button-cta {
+    padding: 2vh 6vh;
+    width: auto;
+    font-size: 2.5vh;
+  }
+  .column-cta {
+    font-size: 3.5vh;
+  }
+}

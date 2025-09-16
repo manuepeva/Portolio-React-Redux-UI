@@ -1,18 +1,17 @@
-import {
-    SEND_FORM
-} from './types'
-import {axiosClient} from '../Components/AxiosClient/AxiosClient'
+import axiosClient from "../api/axiosClient";
+import { SEND_FORM } from "./types";
 
 export const sendFormData = (data) => async (dispatch) => {
-    try {
-        const url = await axiosClient.post("/contact", data)
-        console.log(url.config.data)
-        let info = url.config.data
-        dispatch({
-            type: SEND_FORM,
-            payload: info
-        })
-    } catch (error) {
-        console.log(error.response)
-    }
-}
+  try {
+    const response = await axiosClient.post("/contact", data);
+    console.log(data, 'esto es data en action')
+    dispatch({
+      type: SEND_FORM,
+      payload: response.data, 
+    });
+
+    return response.data; 
+  } catch (error) {
+    console.error(error.response || error.message);
+  }
+};

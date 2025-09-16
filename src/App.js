@@ -3,29 +3,31 @@ import "./index.scss";
 import store from "./Redux/store";
 import { Provider } from "react-redux";
 import Login from "./Components/Login/Login";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Projects from "./Components/ProyectsPage/Projects";
-import Education from "./Components/Education/Education";
-import Contact from "./Components/Contact/Contact";
-import Ubication from "./Components/Location/Ubication";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProyectsPage from "./pages/ProyectsPage/ProyectsPage";
+import EducationCard from "./pages/EducationPage/EducationPage";
+import ContactFormPage from "./pages/ContactFormPage/ContactFormPage";
+import Ubication from "./pages/LocationPage/LocationPage";
 import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
-import { history } from "./Redux/store";
+import Footer from "./Components/PortfolioFooter/PortfolioFooter";
+import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
 
 function App() {
   return (
     <Provider store={store}>
-      <Router history={history}>
-        <Header />
-        <Switch>
-          <Route exact path={"/"} component={Login} />
-          <Route exact path={"/projects"} component={Projects} />
-          <Route exact path={"/education"} component={Education} />
-          <Route exact path={"/location"} component={Ubication} />
-          <Route exact path={"/contact"} component={Contact} />
-        </Switch>
-        <Footer />
-      </Router>
+      <ErrorBoundary>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/projects" element={<ProyectsPage />} />
+            <Route path="/education" element={<EducationCard />} />
+            <Route path="/location" element={<Ubication />} />
+            <Route path="/contact" element={<ContactFormPage />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </ErrorBoundary>
     </Provider>
   );
 }

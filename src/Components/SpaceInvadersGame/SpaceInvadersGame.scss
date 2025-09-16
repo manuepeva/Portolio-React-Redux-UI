@@ -1,0 +1,120 @@
+.battle-container {
+  text-align: center;
+  padding: 5vh 0;
+  font-family: Arial, sans-serif;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+
+    .gameover {
+      color: red;
+      font-weight: bold;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(15, 24px); // 15 columnas
+  grid-template-rows: repeat(15, 24px);   // 15 filas
+  gap: 2px;
+  margin: auto;
+  width: max-content;
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+
+  div {
+    width: 24px;
+    height: 24px;
+    background: black;
+    border-radius: 4px;
+  }
+
+  .invader {
+    background: limegreen;
+    border-radius: 50%;
+  }
+
+  .shooter {
+    background: dodgerblue;
+  }
+
+  .laser {
+    background: red;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #eee;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #ccc;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+// --- Responsive: Tablet ---
+@media (max-width: 900px) {
+.battle-container {
+  padding: 5vh 0;
+  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(15, 20px); 
+  grid-template-rows: repeat(15, 20px);   
+  gap: 3px;
+  margin: auto;
+  width: max-content;
+  background: #111;
+  padding: 7px;
+  border-radius: 7px;
+    div {
+    width: 18px;
+    height: 18px;
+    background: black;
+    border-radius: 4px;
+  }
+}
+}
+
+/* --- Responsive Handy / Mobile (<=600px) --- */
+@media (max-width: 600px) {
+  .battle-container {
+  padding: 5vh 0;
+  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(15, 17px); 
+  grid-template-rows: repeat(15, 17px);   
+  gap: 1px;
+  margin: auto;
+  width: max-content;
+  background: #111;
+  padding: 7px;
+  border-radius: 7px;
+    div {
+    width: 14px;
+    height: 14px;
+    background: black;
+    border-radius: 4px;
+  }
+}
+}

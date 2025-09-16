@@ -1,14 +1,12 @@
-@import "./Components/Navigation/NavigationStyles.scss";
-@import "./Components/Footer/FooterStyles.scss";
-@import "./Components/Projects/ProjectsStyles.scss";
-@import "./Components/Cta/CtaStyles.scss";
-@import "./Components/BattleComp/ReduxCompStyles.scss";
-@import "./Components/ProyectsPage/ProjectsStyles.scss";
-@import "./Components/Education/EducationStyles.scss";
-@import "./Components/Contact/ContactStyles.scss";
-@import "./Components/BattleComp/BattleCompStyles.scss";
-@import "./Components/Error/ErrorStyles.scss";
-@import "./Components//GitRepo//GitRepoStyles.scss";
+@use "./Components/NavigationBar/NavigationBarStyles.scss";
+@use "./Components/PortfolioFooter/PortfolioFooter.scss";
+@use "./pages/ProyectsPage/ProyectsPage.scss";
+@use "./Components/ContactCallToAction/ContactCallToAction.scss";
+@use "./Components/SpaceInvadersGame/SpaceInvadersGame.scss";
+@use "./Components/ProjectsSection/ProjectsSection.scss";
+@use "./pages/EducationPage/EducationPage.scss";
+@use "./Components/ErrorBoundary/ErrorBoundaryStyles.scss";
+@use "./Components/PortfolioRepoLink/PortfolioRepoLink.scss";
 #root,
 *,
 *::after,
@@ -26,13 +24,10 @@ html {
   margin-left: 3%;
   margin-right: 3%;
 }
-.redux-section {
-  background-image: url("./img/reduxComp.png");
-  height: 70vh;
+.space-invaders-section {
+  background-image: url("../utils/img/reduxComp.png");
+  height: auto;
   padding-right: 3%;
   padding-left: 3%;
   background-repeat: no-repeat;
-}
-.footer-component{
-  max-height: 100%;
 }
