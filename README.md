@@ -1,11 +1,13 @@
-Title: Portfolio Full Stack Chat App with React and NodeJS.
+Manuel Perez Portfolio 
 
-Description: Backend created with NodeJS, cors, express, MongoDB, Mongoose, and Nodemon, where routes, controllers,and models 
-where created in order to provide an adequate response to the client´s request.
-Frontend created using create-react-app, node-sass, Redux, Material-UI, Webpack, BabelJS, and uuid to create a customer-facing portfolio.
+Frontend created using React, MUI, React Form, Hooks, Redux, React Router v6, Webpack, SCSS, axios and following SOLID principles of software development.
 
-Objective: Provide a Portfolio interface where the user can easely navigate and search for information, and allow users to
-send a contact form, managed in the backend with MongoDB and ExpressJS.
+Basic backend created with NodeJS, cors, express, MongoDB, Mongoose, and Nodemon, where routes, controllers, and models 
+where created to recive and manage frontend POST request and sent it the my personal email.
+
+Objective: Provide a Portfolio interface where the user can easely navigate and search for contact form, showcasing education, location, space invaders game, and projects fetching them from the Github API.
+
+/// code below added to display badges in the Readme file in Github.
 
 [![Header](https://raw.githubusercontent.com/manuepeva/Portolio-React-Redux-UI/master/Portfolio.png "Header")](https://raw.githubusercontent.com/manuepeva/Portolio-React-Redux-UI/master/Portfolio.png)
 

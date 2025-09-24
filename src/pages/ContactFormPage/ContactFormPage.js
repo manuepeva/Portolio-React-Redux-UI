@@ -32,14 +32,7 @@ const Form = () => {
   });
 
  const onSubmit = async (data) => {
-  const result = await dispatch(sendFormData(data));
-  
-  if (result) {
-    console.log("Mensaje enviado con éxito:", result);
-    reset();
-  } else {
-    console.log("Error al enviar mensaje");
-  }
+  await dispatch(sendFormData(data));
 };
 
 

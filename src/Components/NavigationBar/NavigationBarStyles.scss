@@ -51,10 +51,7 @@ li:last-of-type{
     width: 100%;
     color: black;
 }
-// Responsive Code
-#menu, .exit-btn{
-    display: none;
-}
+
 .header-links-mob{
     position: fixed;
     width: 60%;
@@ -67,6 +64,7 @@ li:last-of-type{
     flex-direction: column;
     justify-content: flex-start;
     z-index: 1;
+    box-shadow: 10px 4px 10px rgba(0,0,0,0.3);
     a{
         color: white;
         padding: 1%;
@@ -79,9 +77,13 @@ li:last-of-type{
         background-color: rgb(79, 80, 83);
     }
 }
-// Media queries
 
-@media(max-width: 768px){
+ // Responsive Code
+#menu, .exit-btn{
+    display: none;
+}
+
+@media(max-width: 600px){
     .container div{
         display: flex;
         flex-direction: row;
@@ -122,3 +124,4 @@ li:last-of-type{
         display: none;
     }
 }
+

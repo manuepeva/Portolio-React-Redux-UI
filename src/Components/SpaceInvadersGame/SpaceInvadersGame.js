@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./SpaceInvadersGame.scss";
+import { Box, Button, Typography } from "@mui/material";
 
 const WIDTH = 15;
 const HEIGHT = 15;
@@ -13,7 +14,7 @@ export default function SpaceInvadersGame() {
   const [gameOver, setGameOver] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
   const direction = useRef(1);
-
+  
   // ---- Inicializar juego ----
   const startGame = () => {
     setShooter(TOTAL - Math.ceil(WIDTH / 2));
@@ -63,12 +64,13 @@ export default function SpaceInvadersGame() {
     const interval = setInterval(() => {
       setInvaders((prev) => {
         if (prev.length === 0) return prev;
-        let atLeftEdge = prev[0] % WIDTH === 0;
-        let atRightEdge = prev[prev.length - 1] % WIDTH === WIDTH - 1;
+        const columns = invaders.map(i => i % WIDTH);
+        const atLeftEdge = columns.includes(0);
+        const atRightEdge = columns.includes(WIDTH - 1);
         let newDir = direction.current;
 
         if ((atLeftEdge && newDir === -1) || (atRightEdge && newDir === 1)) {
-          newDir = WIDTH; // bajar una fila
+          newDir = WIDTH * 0.2; // bajar una fila
         } else if (newDir === WIDTH) {
           newDir = atLeftEdge ? 1 : -1;
         }
@@ -108,20 +110,20 @@ export default function SpaceInvadersGame() {
   }, [invaders, shooter, isRunning]);
 
   return (
-    <div className="battle-container">
-      <h3>
+    <Box className="battle-container">
+      <Typography variant="h3">
         Space Invaders - Score: {score}{" "}
         {gameOver && <span className="gameover"> GAME OVER</span>}
-      </h3>
+      </Typography>
 
       {!isRunning && !gameOver && (
-        <button className="start-btn" onClick={startGame}>
+        <Button variant="contained" className="start-btn" onClick={startGame}>
           ▶ Start Game
-        </button>
+        </Button>
       )}
 
       {(isRunning || gameOver) && (
-        <div className="grid">
+        <Box className="grid">
           {Array.from({ length: TOTAL }).map((_, i) => {
             let className = "";
             if (i === shooter) className = "shooter";
@@ -129,35 +131,35 @@ export default function SpaceInvadersGame() {
             if (lasers.includes(i)) className = "laser";
             return <div key={i} className={className}></div>;
           })}
-        </div>
+        </Box>
       )}
 
       {gameOver && (
-        <button className="start-btn" onClick={startGame}>
+        <Button variant="contained" sx={{m: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}} className="start-btn" onClick={startGame}>
           🔄 Restart
-        </button>
+        </Button>
       )}
 
       {/* Controles táctiles */}
       {isRunning && (
-        <div className="controls">
-          <button
+        <Box className="controls">
+          <Button
             onClick={() => shooter % WIDTH !== 0 && setShooter((s) => s - 1)}
           >
             ⬅️
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() =>
               shooter % WIDTH !== WIDTH - 1 && setShooter((s) => s + 1)
             }
           >
             ➡️
-          </button>
-          <button onClick={() => setLasers((prev) => [...prev, shooter])}>
+          </Button>
+          <Button onClick={() => setLasers((prev) => [...prev, shooter])}>
             🔫 Shoot!
-          </button>
-        </div>
+          </Button>
+        </Box>
       )}
-    </div>
+    </Box>
   );
 }
