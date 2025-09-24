@@ -6,7 +6,7 @@ Basic backend created with NodeJS, cors, express, MongoDB, Mongoose, and Nodemon
 
 Objective: Provide a Portfolio interface where the user can easely navigate and search for contact form, showcasing education, location, space invaders game, and projects fetching them from the Github API.
 
-// code below added to display badges in the Readme file in Github.
+<!-- code below added to display badges in the Readme file in Github. -->
 
 [![Header](https://raw.githubusercontent.com/manuepeva/Portolio-React-Redux-UI/master/Portfolio.png "Header")](https://raw.githubusercontent.com/manuepeva/Portolio-React-Redux-UI/master/Portfolio.png)
 
