@@ -2,8 +2,7 @@ Manuel Perez Portfolio
 
 Frontend created using React, MUI, React Form, Hooks, Redux, React Router v6, Webpack, SCSS, axios and following SOLID principles of software development.
 
-Basic backend created with NodeJS, cors, express, MongoDB, Mongoose, and Nodemon, where routes, controllers, and models 
-where created to recive and manage frontend POST request and sent it the my personal email.
+Basic backend created with NodeJS, cors, express, MongoDB, Mongoose, and Nodemon, to manage frontend POST request and sent it to my personal email.
 
 Objective: Provide a Portfolio interface where the user can easely navigate and search for contact form, showcasing education, location, space invaders game, and projects fetching them from the Github API.
 
