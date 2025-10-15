@@ -7,46 +7,45 @@ import {
   CardMedia,
   Typography,
   Grid,
+  Box,
+  Modal,
 } from "@mui/material";
 import { red } from "@mui/material/colors";
-import imageCusco from "../../../utils/img/cusco.png";
-import imagePeru from "../../../utils/img/peru.png";
-import imageLima from "../../../utils/img/Lima-Peru.jpg";
-
-// Datos de las ubicaciones
-const locations = [
-  {
-    avatar: "C",
-    title: "Cusco",
-    image: imageCusco,
-    description:
-      "The city of Cusco was founded by the Spaniards on March 23, 1534, being also the most important place for the Inca Empire. It is located at 3,339 m.a.s.l",
-  },
-   {
-    avatar: "L",
-    title: "Lima",
-    image: imageLima,
-    description:
-      "Lima is the capital of Peru and is located in the central coastal part of the country, overlooking the Pacific Ocean. It is the largest city in Peru and one of the largest in South America.",
-  },
-  {
-    avatar: "P",
-    title: "Perú",
-    image: imagePeru,
-    description:
-      "Perú is located on the west coast of the Pacific Ocean, in South America. It was the center of the biggest empire that ruled this part of the Earth, the Inca Empire, covering approximately 800,000 sq Km.",
-  },
-];
+import locations from "./utils";
 
 const LocationPage = () => {
+  console.log(locations, "locations");
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [modalImage, setModalImage] = React.useState("");
+  const [zoom, setZoom] = React.useState(false);
+
+  const handleOpenModal = (imageUrl) => {
+    setModalImage(imageUrl);
+    setZoom(false);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setZoom(false);
+  };
+
+  const toggleZoom = (e) => {
+    e.stopPropagation();
+    setZoom((prev) => !prev);
+  };
+
   return (
-    <div className="ubication-container">
+    <Box sx={{ my: { xs: 4, sm: 6, md: 8 }, mx: { xs: 2, sm: 3, md: 5 } }}>
       <Grid container spacing={3} justifyContent="center">
         {locations.map((loc, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{ maxWidth: 345, margin: "0 auto" }}>
               <CardHeader
-                avatar={<Avatar sx={{ bgcolor: red[500] }}>{loc.avatar}</Avatar>}
+                avatar={
+                  <Avatar sx={{ bgcolor: red[500] }}>{loc.avatar}</Avatar>
+                }
                 title={loc.title}
               />
               <CardMedia
@@ -54,6 +53,12 @@ const LocationPage = () => {
                 height="194"
                 image={loc.image}
                 alt={loc.title}
+                sx={{
+                  cursor: "pointer",
+                  transition: "transform 0.3s",
+                  "&:hover": { transform: "scale(1.05)" },
+                }}
+                onClick={() => handleOpenModal(loc.image)}
               />
               <CardContent>
                 <Typography variant="body2" color="text.secondary">
@@ -64,7 +69,46 @@ const LocationPage = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+
+      <Modal
+        open={modalOpen}
+        onClose={handleCloseModal}
+        aria-labelledby="location-modal"
+        aria-describedby="location-image-lightbox"
+        closeAfterTransition
+        BackdropProps={{ style: { backgroundColor: "rgba(0,0,0,0.85)" } }}
+      >
+        <Box
+          onClick={handleCloseModal}
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            p: 2,
+            boxSizing: "border-box",
+          }}
+        >
+          <img
+            src={modalImage}
+            alt="Location"
+            onClick={toggleZoom}
+            style={{
+              maxWidth: "90vw",
+              maxHeight: "90vh",
+              objectFit: "contain",
+              cursor: zoom ? "zoom-out" : "zoom-in",
+              transform: zoom ? "scale(1.15)" : "scale(1)",
+              transition: "transform 0.3s ease",
+            }}
+          />
+        </Box>
+      </Modal>
+    </Box>
   );
 };
 

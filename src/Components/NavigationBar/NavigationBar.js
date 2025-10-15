@@ -1,28 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavigationBar = ({ toggle }) => {
+const NavigationBar = ({ toggle, onLinkClick }) => {
   return (
     <div className="container-nav">
       <nav className="nav">
         <ul className={toggle ? "header-links-mob" : "header-links"} id="nav">
           <li>
-            <Link className="link-h" to="/projects">
+            <Link className="link-h" onClick={onLinkClick} to="/projects">
               Projects
             </Link>
           </li>
           <li>
-            <Link className="link-h" to="/education">
+            <Link className="link-h" onClick={onLinkClick} to="/education">
               Education
             </Link>
           </li>
           <li>
-            <Link className="link-h" to="/location">
+            <Link className="link-h" onClick={onLinkClick} to="/location">
               Location
             </Link>
           </li>
           <li>
-            <Link className="link-h" to="/contact">
+            <Link className="link-h" onClick={onLinkClick} to="/contact">
               Contact
             </Link>
           </li>

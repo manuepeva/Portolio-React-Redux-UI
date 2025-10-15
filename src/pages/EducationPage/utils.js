@@ -36,7 +36,8 @@ export const educationData = [
     description:
       "Online Frontend Developer course. HTML - JavaScript - CSS - Unity - Java - SQL - API - PhP",
     expandedTitle: "Front End Development Course",
-    expandedDescription: "Team Tree House is an organization that offers paid developer courses.",
+    expandedDescription:
+      "Team Tree House is an organization that offers paid developer courses.",
     topics: [
       "Responsive Web Design",
       "JavaScript Algorithms & Data Structures",
@@ -80,7 +81,8 @@ export const educationData = [
     description:
       "Business Management University Degree, four years long and graduated with Thesis. Member of diverse study groups.",
     expandedTitle: "Business Administration Degree",
-    expandedDescription: "Universidad Andina del Cusco is one of the biggest universities in Cusco.",
+    expandedDescription:
+      "Universidad Andina del Cusco is one of the biggest universities in Cusco.",
     topics: [
       "Business Management",
       "Organization",
@@ -103,7 +105,7 @@ export const educationData = [
       "International English Exam, taken on October 12, 2019. Score 87 C-1",
     expandedTitle: "TOEFL",
     expandedDescription:
-      "The American Peruvian Cultural Institut (ICPNA-CUSCO) is authorized to take English international exams in Cusco.",
+      "Authorized to administer international English exams at the American-Peruvian Cultural Institute (ICPNA-Cusco).",
     topics: ["English"],
     dateCompleted: "October 12, 2019",
     link: "https://www.ets.org/",
@@ -115,11 +117,11 @@ export const educationData = [
     subheader: "Ongoing",
     image: acupariCert,
     institution: "ACUPARI - German Peruvian Institut",
-    description: "Ongoing German language studies, currently on level A2.2",
+    description: "Ongoing German language studies, currently on level B1.1",
     expandedTitle: "German Language",
     expandedDescription: "ACUPARI is renewed place to learn German online",
     topics: ["German"],
-    dateCompleted: "Ongoing studies",
+    dateCompleted: "Ongoing",
     link: "https://www.acupari.pe/",
     linkText: "Website",
   },

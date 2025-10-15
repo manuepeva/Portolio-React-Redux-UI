@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {getGithubRepos} from '../../api/githubApi'
+import { getGithubRepos } from "../../api/githubApi";
 import {
   Card,
   CardActionArea,
@@ -17,7 +17,7 @@ const Projects = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
 
-useEffect(() => {
+  useEffect(() => {
     const username = "manuepeva";
 
     const fetchData = async () => {
@@ -35,8 +35,10 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="container-proj">
-      {loading && <p className="loading-data">Loading Data from Github API...</p>}
+    <div className="proyect-container">
+      {loading && (
+        <p className="loading-data">Loading Data from Github API...</p>
+      )}
       <Grid container spacing={3} justifyContent="center">
         {cards.map((repo) => (
           <Grid item xs={12} sm={6} md={4} key={repo.id}>
