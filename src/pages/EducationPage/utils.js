@@ -36,8 +36,7 @@ export const educationData = [
     description:
       "Online Frontend Developer course. HTML - JavaScript - CSS - Unity - Java - SQL - API - PhP",
     expandedTitle: "Front End Development Course",
-    expandedDescription:
-      "Team Tree House is an organization that offers paid developer courses.",
+    expandedDescription: "Team Tree House is an organization that offers paid developer courses.",
     topics: [
       "Responsive Web Design",
       "JavaScript Algorithms & Data Structures",
@@ -101,8 +100,7 @@ export const educationData = [
     subheader: "October 12, 2019",
     image: TOEFL,
     institution: "Test of English as a Foreign Language",
-    description:
-      "International English Exam, taken on October 12, 2019. Score 87 C-1",
+    description: "International English Exam, taken on October 12, 2019. Score 87 C-1",
     expandedTitle: "TOEFL",
     expandedDescription:
       "Authorized to administer international English exams at the American-Peruvian Cultural Institute (ICPNA-Cusco).",

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const NavigationBar = ({ toggle, onLinkClick }) => {
@@ -30,6 +31,11 @@ const NavigationBar = ({ toggle, onLinkClick }) => {
       </nav>
     </div>
   );
+};
+
+NavigationBar.propTypes = {
+  toggle: PropTypes.bool.isRequired,
+  onLinkClick: PropTypes.func,
 };
 
 export default NavigationBar;

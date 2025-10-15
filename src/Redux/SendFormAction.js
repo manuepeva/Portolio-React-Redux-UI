@@ -6,11 +6,12 @@ export const sendFormData = (data) => async (dispatch) => {
     const response = await axiosClient.post("/contact", data);
     dispatch({
       type: SEND_FORM,
-      payload: response.data, 
+      payload: response.data,
     });
 
-    return response.data; 
+    return response.data;
   } catch (error) {
+    // eslint-disable-next-line
     console.error(error.response || error.message);
   }
 };

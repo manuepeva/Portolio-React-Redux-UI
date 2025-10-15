@@ -30,26 +30,24 @@ li:last-of-type {
   width: 100%;
   justify-content: flex-start;
 }
-.logo p {
+.logo .button-name {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
   margin-left: 3rem;
   font-weight: 700;
 }
-.logo img {
+.logo .button-logo {
   width: 35px;
-  height: 35px;
+  height: 30px;
   display: flex;
   align-self: center;
   margin: 0% 0 2% 2%;
 }
-.logo a {
-  display: flex;
-  text-decoration: none;
-  list-style-type: none;
-  width: 100%;
-  color: black;
+.button-menu {
+  height: 30px;
+  width: 15px;
+  margin-right: 3rem;
 }
 
 .header-links-mob {
@@ -82,8 +80,7 @@ li:last-of-type {
 }
 
 // Responsive Code
-#menu,
-.exit-btn {
+.button-menu {
   display: none;
 }
 
@@ -101,11 +98,12 @@ li:last-of-type {
     margin-top: 2%;
     display: none;
   }
-  #menu,
-  .exit-btn {
+  .button-menu {
     display: flex;
     color: white;
-    align-content: flex-start;
+    & img {
+      width: 50px;
+    }
   }
   .container {
     margin-top: 3vh;

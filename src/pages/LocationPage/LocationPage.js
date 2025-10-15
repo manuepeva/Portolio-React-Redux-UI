@@ -14,7 +14,6 @@ import { red } from "@mui/material/colors";
 import locations from "./utils";
 
 const LocationPage = () => {
-  console.log(locations, "locations");
   const [modalOpen, setModalOpen] = React.useState(false);
   const [modalImage, setModalImage] = React.useState("");
   const [zoom, setZoom] = React.useState(false);
@@ -43,9 +42,7 @@ const LocationPage = () => {
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{ maxWidth: 345, margin: "0 auto" }}>
               <CardHeader
-                avatar={
-                  <Avatar sx={{ bgcolor: red[500] }}>{loc.avatar}</Avatar>
-                }
+                avatar={<Avatar sx={{ bgcolor: red[500] }}>{loc.avatar}</Avatar>}
                 title={loc.title}
               />
               <CardMedia
@@ -93,19 +90,27 @@ const LocationPage = () => {
             boxSizing: "border-box",
           }}
         >
-          <img
-            src={modalImage}
-            alt="Location"
+          <button
             onClick={toggleZoom}
             style={{
-              maxWidth: "90vw",
-              maxHeight: "90vh",
-              objectFit: "contain",
+              background: "none",
+              border: "none",
+              padding: 0,
               cursor: zoom ? "zoom-out" : "zoom-in",
-              transform: zoom ? "scale(1.15)" : "scale(1)",
-              transition: "transform 0.3s ease",
             }}
-          />
+          >
+            <img
+              src={modalImage}
+              alt="Location"
+              style={{
+                maxWidth: "90vw",
+                maxHeight: "90vh",
+                objectFit: "contain",
+                transform: zoom ? "scale(1.15)" : "scale(1)",
+                transition: "transform 0.3s ease",
+              }}
+            />
+          </button>
         </Box>
       </Modal>
     </Box>

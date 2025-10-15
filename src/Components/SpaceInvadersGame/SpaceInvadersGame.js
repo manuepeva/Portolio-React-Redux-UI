@@ -14,7 +14,7 @@ export default function SpaceInvadersGame() {
   const [gameOver, setGameOver] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
   const direction = useRef(1);
-  
+
   // ---- Inicializar juego ----
   const startGame = () => {
     setShooter(TOTAL - Math.ceil(WIDTH / 2));
@@ -64,7 +64,7 @@ export default function SpaceInvadersGame() {
     const interval = setInterval(() => {
       setInvaders((prev) => {
         if (prev.length === 0) return prev;
-        const columns = invaders.map(i => i % WIDTH);
+        const columns = invaders.map((i) => i % WIDTH);
         const atLeftEdge = columns.includes(0);
         const atRightEdge = columns.includes(WIDTH - 1);
         let newDir = direction.current;
@@ -80,10 +80,12 @@ export default function SpaceInvadersGame() {
       });
     }, 500);
     return () => clearInterval(interval);
+    // eslint-disable-next-line
   }, [isRunning, gameOver]);
 
   // ---- Colisiones ----
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect */
     if (!isRunning) return;
     setInvaders((prevInvaders) => {
       const hits = lasers.filter((l) => prevInvaders.includes(l));
@@ -98,6 +100,7 @@ export default function SpaceInvadersGame() {
 
   // ---- Game Over ----
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect */
     if (!isRunning) return;
     if (invaders.includes(shooter) || invaders.some((i) => i >= TOTAL - WIDTH)) {
       setGameOver(true);
@@ -112,8 +115,7 @@ export default function SpaceInvadersGame() {
   return (
     <Box className="battle-container">
       <Typography variant="h3">
-        Space Invaders - Score: {score}{" "}
-        {gameOver && <span className="gameover"> GAME OVER</span>}
+        Space Invaders - Score: {score} {gameOver && <span className="gameover"> GAME OVER</span>}
       </Typography>
 
       {!isRunning && !gameOver && (
@@ -135,7 +137,12 @@ export default function SpaceInvadersGame() {
       )}
 
       {gameOver && (
-        <Button variant="contained" sx={{m: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}} className="start-btn" onClick={startGame}>
+        <Button
+          variant="contained"
+          sx={{ m: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 } }}
+          className="start-btn"
+          onClick={startGame}
+        >
           🔄 Restart
         </Button>
       )}
@@ -143,21 +150,11 @@ export default function SpaceInvadersGame() {
       {/* Controles táctiles */}
       {isRunning && (
         <Box className="controls">
-          <Button
-            onClick={() => shooter % WIDTH !== 0 && setShooter((s) => s - 1)}
-          >
-            ⬅️
-          </Button>
-          <Button
-            onClick={() =>
-              shooter % WIDTH !== WIDTH - 1 && setShooter((s) => s + 1)
-            }
-          >
+          <Button onClick={() => shooter % WIDTH !== 0 && setShooter((s) => s - 1)}>⬅️</Button>
+          <Button onClick={() => shooter % WIDTH !== WIDTH - 1 && setShooter((s) => s + 1)}>
             ➡️
           </Button>
-          <Button onClick={() => setLasers((prev) => [...prev, shooter])}>
-            🔫 Shoot!
-          </Button>
+          <Button onClick={() => setLasers((prev) => [...prev, shooter])}>🔫 Shoot!</Button>
         </Box>
       )}
     </Box>

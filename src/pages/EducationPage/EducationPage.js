@@ -23,6 +23,7 @@ import EducationModal from "./EducationModal";
 
 // Styled component para el botón de expandir
 const ExpandMore = styled((props) => {
+  // eslint-disable-next-line
   const { expand, ...other } = props;
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
@@ -67,9 +68,7 @@ const EducationCard = () => {
           <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
             <Card sx={{ maxWidth: 345, margin: "auto" }}>
               <CardHeader
-                avatar={
-                  <Avatar sx={{ bgcolor: red[500] }}>{edu.avatar}</Avatar>
-                }
+                avatar={<Avatar sx={{ bgcolor: red[500] }}>{edu.avatar}</Avatar>}
                 title={edu.title}
                 subheader={edu.subheader}
               />
@@ -108,11 +107,7 @@ const EducationCard = () => {
                   <ExpandMoreIcon />
                 </ExpandMore>
               </CardActions>
-              <Collapse
-                in={expandedIndex === index}
-                timeout="auto"
-                unmountOnExit
-              >
+              <Collapse in={expandedIndex === index} timeout="auto" unmountOnExit>
                 <CardContent>
                   <Typography variant="h6" color="primary">
                     {edu.expandedTitle}

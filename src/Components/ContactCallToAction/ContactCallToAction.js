@@ -8,12 +8,7 @@ const ContactCallToAction = () => {
     <div className="row cta">
       <div className="column column-cta">Contact Me</div>
       <div className="column">
-        <Button
-          id="button-cta"
-          component={Link}
-          to="/contact"
-          variant="contained"
-        >
+        <Button id="button-cta" component={Link} to="/contact" variant="contained">
           Email
         </Button>
       </div>

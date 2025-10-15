@@ -25,15 +25,41 @@ const Header = () => {
   return (
     <div className="container hide-container">
       <div className="logo">
-        <p onClick={handleClickLogo}>Manuel Pérez</p>
-        <img src={logo} alt="Logo MPV" />
-        <img
-          src={ham}
-          alt="Toggle Menu"
-          className="menu"
-          id="menu"
+        <button
+          onClick={handleClickLogo}
+          className="button-name"
+          style={{
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          Manuel Pérez
+        </button>
+        <button
+          onClick={handleClickLogo}
+          className="button-logo"
+          style={{
+            background: "none",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
+          }}
+        >
+          <img src={logo} alt="Logo MPV" />
+        </button>
+        <button
           onClick={handleClickToggle}
-        />
+          className="button-menu"
+          style={{
+            background: "none",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
+          }}
+        >
+          <img src={ham} alt="Toggle Menu" />
+        </button>
       </div>
       {toggle && (
         <div
@@ -49,7 +75,14 @@ const Header = () => {
           <NavigationBar toggle={toggle} onLinkClick={() => setToggle(false)} />
           <div
             className="sidebar-overlay"
+            role="button"
+            tabIndex={0}
             onClick={handleOverlayClick}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                handleOverlayClick();
+              }
+            }}
             style={{
               position: "fixed",
               top: 0,

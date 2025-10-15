@@ -14,9 +14,7 @@ const HeroSection = () => {
       </div>
       <div className="bannerT">
         <h1>Frontend Developer</h1>
-        <p className="subTitle">
-          Hi, I´m Manuel. I develop & build with ReactJS
-        </p>
+        <p className="subTitle">Hi, I´m Manuel. I develop & build with ReactJS</p>
       </div>
       <div className="AttentionG">
         <img src={AttentionG} alt="Attention Graver"></img>

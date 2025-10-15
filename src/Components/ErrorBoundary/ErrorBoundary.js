@@ -10,11 +10,6 @@ class ErrorBoundary extends React.Component {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {
-    // Puedes loguear el error a un servicio externo aquí
-    console.error("ErrorBoundary caught an error", error, errorInfo);
-  }
-
   render() {
     if (this.state.hasError) {
       return (
@@ -24,7 +19,7 @@ class ErrorBoundary extends React.Component {
         </div>
       );
     }
-    // ¡IMPORTANTE! Debe retornar los hijos si no hay error
+    // eslint-disable-next-line
     return this.props.children;
   }
 }

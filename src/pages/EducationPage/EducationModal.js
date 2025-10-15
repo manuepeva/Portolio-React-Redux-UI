@@ -1,13 +1,8 @@
 import { Box, Modal } from "@mui/material";
+import PropTypes from "prop-types";
 import React from "react";
 
-const EducationModal = ({
-  handleCloseModal,
-  modalImage,
-  modalOpen,
-  toggleZoom,
-  zoom,
-}) => {
+const EducationModal = ({ handleCloseModal, modalImage, modalOpen, toggleZoom, zoom }) => {
   return (
     <>
       <Modal
@@ -33,23 +28,39 @@ const EducationModal = ({
             boxSizing: "border-box",
           }}
         >
-          <img
-            src={modalImage}
-            alt="Preview"
+          <button
             onClick={toggleZoom}
             style={{
-              maxWidth: "90vw",
-              maxHeight: "90vh",
-              objectFit: "contain",
+              background: "none",
+              border: "none",
+              padding: 0,
               cursor: zoom ? "zoom-out" : "zoom-in",
-              transform: zoom ? "scale(1.15)" : "scale(1)",
-              transition: "transform 0.3s ease",
             }}
-          />
+          >
+            <img
+              src={modalImage}
+              alt="Preview"
+              style={{
+                maxWidth: "90vw",
+                maxHeight: "90vh",
+                objectFit: "contain",
+                transform: zoom ? "scale(1.15)" : "scale(1)",
+                transition: "transform 0.3s ease",
+              }}
+            />
+          </button>
         </Box>
       </Modal>
     </>
   );
+};
+
+EducationModal.propTypes = {
+  handleCloseModal: PropTypes.func.isRequired,
+  modalImage: PropTypes.string.isRequired,
+  modalOpen: PropTypes.bool.isRequired,
+  toggleZoom: PropTypes.func.isRequired,
+  zoom: PropTypes.bool.isRequired,
 };
 
 export default EducationModal;

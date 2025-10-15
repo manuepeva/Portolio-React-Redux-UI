@@ -5,7 +5,6 @@ import {
   CardActionArea,
   CardActions,
   CardContent,
-  CardMedia,
   Button,
   Typography,
   Grid,
@@ -25,6 +24,7 @@ const Projects = () => {
         const repos = await getGithubRepos(username, secrets);
         setCards(repos);
       } catch (err) {
+        // eslint-disable-next-line
         console.error(err);
       } finally {
         setLoading(false);
@@ -39,10 +39,19 @@ const Projects = () => {
       {loading && (
         <p className="loading-data">Loading Data from Github API...</p>
       )}
-      <Grid container spacing={3} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center">
         {cards.map((repo) => (
           <Grid item xs={12} sm={6} md={4} key={repo.id}>
-            <Card sx={{ width: 250, height: "auto", margin: 2 }}>
+            <Card
+              sx={{
+                width: 250,
+                height: { xs: 180, md: 250 },
+                margin: 2,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
               <CardActionArea>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
