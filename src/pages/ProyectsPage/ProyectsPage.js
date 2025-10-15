@@ -44,16 +44,22 @@ const Projects = () => {
           <Grid item xs={12} sm={6} md={4} key={repo.id}>
             <Card
               sx={{
-                width: 250,
+                width: 300,
                 height: { xs: 180, md: 250 },
                 margin: 2,
+                padding: { xs: 1, md: 3 },
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
               }}
             >
               <CardActionArea>
-                <CardContent>
+                <CardContent
+                  sx={{
+                    wordBreak: "break-word", // permite cortar palabras largas
+                    overflowWrap: "break-word", // soporte adicional
+                  }}
+                >
                   <Typography gutterBottom variant="h5" component="div">
                     {repo.name}
                   </Typography>
