@@ -1,20 +1,24 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
-const isDevelopment = process.env.NODE_ENV !== 'production';
+const isDevelopment = process.env.NODE_ENV !== "production";
+const enableReactRefresh = isDevelopment && process.env.WEBPACK_SERVE;
 
 module.exports = {
-  mode: isDevelopment ? 'development' : 'production',
-  entry: './src/index.js',
+  mode: isDevelopment ? "development" : "production",
+  entry: "./src/index.js",
   output: {
-    filename: 'portfolioBuild.js',
-    path: path.resolve(__dirname, 'portfolioBuild'),
+    filename: isDevelopment ? "[name].js" : "[name].[contenthash].js",
+    chunkFilename: isDevelopment
+      ? "[name].chunk.js"
+      : "[name].[contenthash].chunk.js",
+    path: path.resolve(__dirname, "portfolioBuild"),
     clean: true,
-    publicPath: '/',
+    publicPath: "/",
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: [".js", ".jsx"],
   },
   module: {
     rules: [
@@ -22,52 +26,58 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             presets: [
-              ['@babel/preset-env', { targets: "defaults" }],
-              '@babel/preset-react'
+              ["@babel/preset-env", { targets: "defaults" }],
+              "@babel/preset-react",
             ],
             plugins: [
-              isDevelopment && require.resolve('react-refresh/babel'),
-              '@babel/plugin-proposal-optional-chaining',
-              '@babel/plugin-proposal-nullish-coalescing-operator',
+              enableReactRefresh && require.resolve("react-refresh/babel"),
+              "@babel/plugin-proposal-optional-chaining",
+              "@babel/plugin-proposal-nullish-coalescing-operator",
             ].filter(Boolean),
-          }
-        }
+          },
+        },
       },
       {
         test: /\.scss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
         test: /\.html$/i,
-        loader: 'html-loader'
-      }
-    ]
+        loader: "html-loader",
+      },
+    ],
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+    runtimeChunk: "single",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: './public/mpv.png'
+      template: "./public/index.html",
+      favicon: "./public/mpv.png",
     }),
-    isDevelopment && new ReactRefreshWebpackPlugin(),
+    enableReactRefresh && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),
   devServer: {
-    static: { directory: path.join(__dirname, 'public') },
+    static: { directory: path.join(__dirname, "public") },
     compress: true,
     port: 3000,
     historyApiFallback: true,
     open: true,
-    hot: 'only',
+    hot: "only",
   },
-  devtool: isDevelopment ? 'inline-source-map' : false,
+  devtool: isDevelopment ? "inline-source-map" : false,
 };
