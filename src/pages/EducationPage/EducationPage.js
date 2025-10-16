@@ -20,6 +20,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import { styled } from "@mui/material/styles";
 import EducationModal from "./EducationModal";
 import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 // Styled component para el botón de expandir
 const ExpandMore = styled((props) => {
@@ -35,7 +36,6 @@ const ExpandMore = styled((props) => {
 }));
 
 const EducationPage = ({ educationData }) => {
-  console.log(educationData, "education data");
   const { t } = useTranslation();
   const [expandedIndex, setExpandedIndex] = React.useState(null);
   const [modalOpen, setModalOpen] = React.useState(false);
@@ -68,11 +68,15 @@ const EducationPage = ({ educationData }) => {
       <Grid container spacing={2} justifyContent="center">
         {educationData.map((edu, index) => (
           <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
-            <Card sx={{ maxWidth: 345, margin: "auto" }}>
+            <Card
+              sx={{
+                maxWidth: 345,
+                margin: "auto",
+                minHeight: { xs: 520, sm: 600, md: 600 },
+              }}
+            >
               <CardHeader
-                avatar={
-                  <Avatar sx={{ bgcolor: red[500] }}>{edu.avatar}</Avatar>
-                }
+                avatar={<Avatar sx={{ bgcolor: red[500] }}>{edu.avatar}</Avatar>}
                 title={edu.title}
                 subheader={edu.subheader}
               />
@@ -111,18 +115,12 @@ const EducationPage = ({ educationData }) => {
                   <ExpandMoreIcon />
                 </ExpandMore>
               </CardActions>
-              <Collapse
-                in={expandedIndex === index}
-                timeout="auto"
-                unmountOnExit
-              >
+              <Collapse in={expandedIndex === index} timeout="auto" unmountOnExit>
                 <CardContent>
                   <Typography variant="h6" color="primary">
                     {edu.expandedTitle}
                   </Typography>
-                  <Typography>
-                    {t("educationPage.frontendExpandedDescriptionLabel")}
-                  </Typography>
+                  <Typography>{t("educationPage.frontendExpandedDescriptionLabel")}</Typography>
                   <Typography>{edu.expandedDescription}</Typography>
                   <Typography paragraph>
                     {edu.topics.map((topic, i) => (
@@ -132,9 +130,7 @@ const EducationPage = ({ educationData }) => {
                     ))}
                   </Typography>
                   <Typography>{`${t("educationPage.frontendExpandedDateCompletedLabel")}: ${edu.dateCompleted}`}</Typography>
-                  <Link href={edu.link}>
-                    {t("educationPage.frontendExpandedLinkText")}
-                  </Link>
+                  <Link href={edu.link}>{t("educationPage.frontendExpandedLinkText")}</Link>
                 </CardContent>
               </Collapse>
             </Card>
@@ -151,6 +147,10 @@ const EducationPage = ({ educationData }) => {
       />
     </Box>
   );
+};
+
+EducationPage.propTypes = {
+  educationData: PropTypes.array.isRequired,
 };
 
 export default EducationPage;

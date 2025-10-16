@@ -3,14 +3,7 @@ import { useDispatch } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
 import { sendFormData } from "../../Redux/SendFormAction";
 
-import {
-  Box,
-  Button,
-  TextField,
-  Typography,
-  Alert,
-  Stack,
-} from "@mui/material";
+import { Box, Button, TextField, Typography, Alert, Stack } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 const Form = () => {
@@ -129,13 +122,7 @@ const Form = () => {
             name="comments"
             control={control}
             render={({ field }) => (
-              <TextField
-                {...field}
-                label={t("form.comments")}
-                fullWidth
-                multiline
-                rows={4}
-              />
+              <TextField {...field} label={t("form.comments")} fullWidth multiline rows={4} />
             )}
           />
         </Stack>
@@ -144,9 +131,7 @@ const Form = () => {
           {t("form.send")}
         </Button>
 
-        {isSubmitSuccessful && (
-          <Alert severity="success">{t("form.success")}</Alert>
-        )}
+        {isSubmitSuccessful && <Alert severity="success">{t("form.success")}</Alert>}
       </Box>
     </Box>
   );

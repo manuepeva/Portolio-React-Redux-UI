@@ -7,7 +7,6 @@ import TOEFL from "../../../utils/img/toefl.png";
 import AcupariCert from "../../../utils/img/acupari.png";
 import { useTranslation } from "react-i18next";
 import EducationPage from "./EducationPage";
-import EducationSection from "./EducationPage";
 
 const EducationTranslator = () => {
   const { t } = useTranslation();

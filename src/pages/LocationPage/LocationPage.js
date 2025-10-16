@@ -11,6 +11,7 @@ import {
   Modal,
 } from "@mui/material";
 import { red } from "@mui/material/colors";
+import PropTypes from "prop-types";
 
 const LocationPage = ({ locations }) => {
   const [modalOpen, setModalOpen] = React.useState(false);
@@ -39,11 +40,15 @@ const LocationPage = ({ locations }) => {
       <Grid container spacing={3} justifyContent="center">
         {locations.map((loc, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card sx={{ maxWidth: 345, margin: "0 auto" }}>
+            <Card
+              sx={{
+                maxWidth: 345,
+                margin: "0 auto",
+                minHeight: { xs: 400, sm: 450 },
+              }}
+            >
               <CardHeader
-                avatar={
-                  <Avatar sx={{ bgcolor: red[500] }}>{loc.avatar}</Avatar>
-                }
+                avatar={<Avatar sx={{ bgcolor: red[500] }}>{loc.avatar}</Avatar>}
                 title={loc.title}
               />
               <CardMedia
@@ -116,6 +121,10 @@ const LocationPage = ({ locations }) => {
       </Modal>
     </Box>
   );
+};
+
+LocationPage.propTypes = {
+  locations: PropTypes.array.isRequired,
 };
 
 export default LocationPage;

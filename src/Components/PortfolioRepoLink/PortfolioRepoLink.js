@@ -24,9 +24,7 @@ const GitRepoLink = () => {
           margin: { xs: 3, md: 5 },
         }}
       >
-        <h3 style={{ fontSize: "1.2rem", marginBottom: "12px" }}>
-          {t("portfolioRepoLink.title")}
-        </h3>
+        <h3 style={{ fontSize: "1.2rem", marginBottom: "12px" }}>{t("portfolioRepoLink.title")}</h3>
         <Button
           variant="contained"
           href="https://github.com/manuepeva"

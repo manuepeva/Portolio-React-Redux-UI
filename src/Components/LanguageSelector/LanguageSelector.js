@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import {
-  IconButton,
-  Menu,
-  MenuItem,
-  ListItemIcon,
-  ListItemText,
-} from "@mui/material";
+import { IconButton, Menu, MenuItem, ListItemIcon, ListItemText } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
-import i18next from "i18next";
+import { changeLanguage } from "i18next";
 
 const languages = [
   { code: "en", name: "English", flag: "🇺🇸" },
@@ -23,7 +17,7 @@ const LanguageSelector = () => {
   const handleClose = () => setAnchorEl(null);
 
   const handleLanguageChange = (lang) => {
-    i18next.changeLanguage(lang);
+    changeLanguage(lang);
     handleClose();
   };
 
@@ -56,10 +50,7 @@ const LanguageSelector = () => {
         }}
       >
         {languages.map((lang) => (
-          <MenuItem
-            key={lang.code}
-            onClick={() => handleLanguageChange(lang.code)}
-          >
+          <MenuItem key={lang.code} onClick={() => handleLanguageChange(lang.code)}>
             <ListItemIcon sx={{ minWidth: "30px" }}>{lang.flag}</ListItemIcon>
             <ListItemText primary={lang.code.toUpperCase()} />
           </MenuItem>

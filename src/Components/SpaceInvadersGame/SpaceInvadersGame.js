@@ -104,10 +104,7 @@ export default function SpaceInvadersGame() {
   useEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect */
     if (!isRunning) return;
-    if (
-      invaders.includes(shooter) ||
-      invaders.some((i) => i >= TOTAL - WIDTH)
-    ) {
+    if (invaders.includes(shooter) || invaders.some((i) => i >= TOTAL - WIDTH)) {
       setGameOver(true);
       setIsRunning(false);
     }
@@ -121,9 +118,7 @@ export default function SpaceInvadersGame() {
     <Box className="battle-container">
       <Typography variant="h3">
         Space Invaders - {t("spaceInvaders.score")} {score}{" "}
-        {gameOver && (
-          <span className="gameover">{t("spaceInvaders.gameOver")}</span>
-        )}
+        {gameOver && <span className="gameover">{t("spaceInvaders.gameOver")}</span>}
       </Typography>
 
       {!isRunning && !gameOver && (
@@ -158,16 +153,8 @@ export default function SpaceInvadersGame() {
       {/* Controles táctiles */}
       {isRunning && (
         <Box className="controls">
-          <Button
-            onClick={() => shooter % WIDTH !== 0 && setShooter((s) => s - 1)}
-          >
-            ⬅️
-          </Button>
-          <Button
-            onClick={() =>
-              shooter % WIDTH !== WIDTH - 1 && setShooter((s) => s + 1)
-            }
-          >
+          <Button onClick={() => shooter % WIDTH !== 0 && setShooter((s) => s - 1)}>⬅️</Button>
+          <Button onClick={() => shooter % WIDTH !== WIDTH - 1 && setShooter((s) => s + 1)}>
             ➡️
           </Button>
           <Button onClick={() => setLasers((prev) => [...prev, shooter])}>

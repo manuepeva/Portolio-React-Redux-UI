@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-  Box,
-  Link,
-} from "@mui/material";
+import { Grid, Card, CardMedia, CardContent, Typography, Box, Link } from "@mui/material";
+import PropTypes from "prop-types";
 
 const ProyectsSection = ({ proyects }) => {
   return (
@@ -50,6 +43,10 @@ const ProyectsSection = ({ proyects }) => {
       </Grid>
     </Box>
   );
+};
+
+ProyectsSection.propTypes = {
+  proyects: PropTypes.array.isRequired,
 };
 
 export default ProyectsSection;

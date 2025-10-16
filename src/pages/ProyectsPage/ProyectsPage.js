@@ -38,9 +38,7 @@ const Projects = () => {
 
   return (
     <div className="proyect-container">
-      {loading && (
-        <p className="loading-data">Loading Data from Github API...</p>
-      )}
+      {loading && <p className="loading-data">Loading Data from Github API...</p>}
       <Grid container spacing={4} justifyContent="center">
         {cards.map((repo) => (
           <Grid item xs={12} sm={6} md={4} key={repo.id}>

@@ -4,7 +4,7 @@ import productivity from "../../../utils/img/productivity.png";
 import AttentionG from "../../../utils/img/attentionGraber.png";
 import { useTranslation } from "react-i18next";
 const HeroSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="banner">
       <div className="divImg">

@@ -5,12 +5,9 @@ import "./PortfolioFooter.scss";
 import { useTranslation } from "react-i18next";
 
 const PortfolioFooter = () => {
-  const { t, i18next } = useTranslation();
+  const { t } = useTranslation();
   return (
-    <div
-      className="footerImg"
-      style={{ backgroundImage: `url(${background})` }}
-    >
+    <div className="footerImg" style={{ backgroundImage: `url(${background})` }}>
       <footer className="footer" role="contentinfo" aria-label="Main footer">
         <div className="footer-container">
           <div className="column about" aria-label="Personal information">
@@ -31,17 +28,10 @@ const PortfolioFooter = () => {
 
           <div className="column social" aria-label="Social media links">
             <div className="social-item">
-              <a
-                href="https://github.com/manuepeva"
-                aria-label="Manuel Pérez Github"
-              >
+              <a href="https://github.com/manuepeva" aria-label="Manuel Pérez Github">
                 {t("footer.github")}
               </a>
-              <span
-                className="iconify"
-                data-icon="logos:github-octocat"
-                aria-hidden="true"
-              ></span>
+              <span className="iconify" data-icon="logos:github-octocat" aria-hidden="true"></span>
             </div>
             <div className="social-item">
               <a
@@ -50,24 +40,13 @@ const PortfolioFooter = () => {
               >
                 {t("footer.netlify")}
               </a>
-              <span
-                className="iconify"
-                data-icon="logos-netlify"
-                aria-hidden="true"
-              ></span>
+              <span className="iconify" data-icon="logos-netlify" aria-hidden="true"></span>
             </div>
             <div className="social-item">
-              <a
-                href="https://dashboard.heroku.com/account"
-                aria-label="Manuel Pérez Heroku"
-              >
+              <a href="https://dashboard.heroku.com/account" aria-label="Manuel Pérez Heroku">
                 {t("footer.heroku")}
               </a>
-              <span
-                className="iconify"
-                data-icon="logos:heroku-icon"
-                aria-hidden="true"
-              ></span>
+              <span className="iconify" data-icon="logos:heroku-icon" aria-hidden="true"></span>
             </div>
             <div className="social-item">
               <a

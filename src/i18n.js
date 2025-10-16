@@ -19,7 +19,7 @@ const resources = {
     translation: frTranslation,
   },
 };
-
+// eslint-disable-next-line
 i18n
   .use(initReactI18next)
   .use(LanguageDetector)

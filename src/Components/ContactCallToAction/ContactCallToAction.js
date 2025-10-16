@@ -5,17 +5,12 @@ import "./ContactCallToAction.scss";
 import { useTranslation } from "react-i18next";
 
 const ContactCallToAction = () => {
-  const { t, i18next } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="row cta">
       <div className="column column-cta">{t("contactCTA.contactMe")}</div>
       <div className="column">
-        <Button
-          id="button-cta"
-          component={Link}
-          to="/contact"
-          variant="contained"
-        >
+        <Button id="button-cta" component={Link} to="/contact" variant="contained">
           {t("contactCTA.email")}
         </Button>
       </div>
