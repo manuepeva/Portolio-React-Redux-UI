@@ -33,12 +33,10 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix"
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --mode development",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint:fix": "eslint src --ext .js,.jsx --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -68,6 +66,8 @@
     "@babel/preset-react": "^7.27.1",
     "@eslint/js": "^9.37.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.6.1",
+    "ajv": "^6.12.6",
+    "ajv-keywords": "^3.5.2",
     "babel-loader": "^8.4.1",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
@@ -80,9 +80,9 @@
     "globals": "^16.4.0",
     "prettier": "^3.6.2",
     "react-refresh": "^0.17.0",
-    "react-scripts": "^5.0.1",
     "sass": "^1.92.1",
     "sass-loader": "^16.0.5",
+    "schema-utils": "^2.7.1",
     "webpack": "^5.101.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.2"
