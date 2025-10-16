@@ -2,7 +2,13 @@ import { Box, Modal } from "@mui/material";
 import PropTypes from "prop-types";
 import React from "react";
 
-const EducationModal = ({ handleCloseModal, modalImage, modalOpen, toggleZoom, zoom }) => {
+const EducationModal = ({
+  handleCloseModal,
+  modalImage,
+  modalOpen,
+  toggleZoom,
+  zoom,
+}) => {
   return (
     <>
       <Modal

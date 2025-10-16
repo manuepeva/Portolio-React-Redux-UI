@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "title": "Frontend Developer",
+    "subtitle": "Hi, I'm Manuel. I develop & build with ReactJS"
+  },
+  "contactCTA": {
+    "contactMe": "Contact Me",
+    "email": "Email"
+  },
+  "footer": {
+    "name": "Manuel Pérez",
+    "role": "Front End Developer",
+    "zip": "ZIP 08000",
+    "location": "Cusco Peru",
+    "projects": "Projects",
+    "education": "Education",
+    "locationLink": "Location",
+    "contact": "Contact",
+    "github": "Github",
+    "netlify": "Netlify",
+    "heroku": "Heroku",
+    "stackoverflow": "Stack Over Flow"
+  },
+  "projectsSection": {
+    "weatherApiTitle": "Weather API",
+    "weatherApiDesc": "Objective: Search for a city and country and get its current weather.",
+    "cryptoApiTitle": "Crypto Currency API",
+    "cryptoApiDesc": "Objective: Search for your favorite crypto currency and get its current value.",
+    "drinksApiTitle": "Search Your Drink API",
+    "drinksApiDesc": "Objective: Search for your favorite drinks.",
+    "carInsuranceApiTitle": "Car Insurance API",
+    "carInsuranceApiDesc": "Objective: Search for car insurance options."
+  },
+  "portfolioRepoLink": {
+    "title": "Link to the Portfolio's GitHub Repository",
+    "goTo": "Go to GitHub"
+  },
+  "form": {
+    "title": "Please Enter Your Information",
+    "name": "Name",
+    "firstNameRequired": "First name is required",
+    "lastNameRequired": "Last name is required",
+    "lastName": "Last Name",
+    "email": "Email",
+    "emailRequired": "Email is required",
+    "date": "Date",
+    "dateRequired": "Date is required",
+    "comments": "Comments",
+    "send": "Send",
+    "success": "Your Message was Successfully Sent",
+    "error": "Please Enter Your Name, Last Name and Date"
+  },
+  "spaceInvaders": {
+    "score": "Score",
+    "gameOver": "GAME OVER",
+    "startGame": "Start Game",
+    "shoot": "Shoot!",
+    "restart": "Restart"
+  },
+  "errorBoundary": {
+    "somethingWentWrong": "Something went wrong."
+  },
+  "proyectsPage": "Go to Repository",
+  "navigation": {
+    "projects": "Projects",
+    "education": "Education",
+    "location": "Location",
+    "contact": "Contact"
+  },
+  "locationPage": {
+    "cuscoTitle": "Cusco",
+    "cuscoDesc": "The city of Cusco was founded by the Spaniards on March 23, 1534, being also the most important place for the Inca Empire. It is located at 3,339 m.a.s.l.",
+    "limaTitle": "Lima",
+    "limaDesc": "Lima is the capital of Peru and is located in the central coastal part of the country, overlooking the Pacific Ocean. It is the largest city in Peru and one of the largest in South America.",
+    "peruTitle": "Perú",
+    "peruDesc": "Perú is located on the west coast of the Pacific Ocean, in South America. It was the center of the biggest empire that ruled this part of the Earth, the Inca Empire, covering approximately 800,000 sq km.",
+    "germanyTitle": "Germany",
+    "germanyDesc": "Bad Liebenzell is located in southwest Germany, in the heart of the stunning Black Forest. This charming spa town combines historic architecture with beautiful natural surroundings, including dense forests, rolling hills, and clear rivers."
+  },
+  "educationPage": {
+    "frontendTitle": "Frontend Developer",
+    "frontendSubheader": "August 23, 2017",
+    "frontendInstitution": "FreeCodeCamp University",
+    "frontendDesc": "Frontend Developer Certification - 400 hours. JavaScript - Algorithms - Libraries - CSS - HTML API - Github",
+    "frontendExpandedTitle": "Online Frontend Developer Certification",
+    "frontendExpandedDesc": "This is a nonprofit organization (United States Federal ID: 820779546), that offers free online development courses.",
+    "frontendExpandedDescriptionLabel": "Description",
+    "frontendExpandedTopicsLabel": "Topics",
+    "frontendExpandedTopics": [
+      "Responsive Web Design",
+      "JavaScript Algorithms & Data Structures",
+      "Front End Libraries",
+      "API´s and microservices"
+    ],
+    "frontendExpandedDateCompletedLabel": "Completed on",
+    "frontendExpandedDateCompleted": "August 23, 2017",
+    "frontendExpandedLinkText": "Certificate",
+
+    "treehouseTitle": "Frontend Course",
+    "treehouseSubheader": "December 25, 2018",
+    "treehouseInstitution": "TeamTreeHouse",
+    "treehouseDesc": "Online Frontend Developer course. HTML - JavaScript - CSS - Unity - Java - SQL - API - PhP",
+    "treehouseExpandedTitle": "Front End Development Course",
+    "treehouseExpandedDesc": "Team Tree House is an organization that offers paid developer courses.",
+    "treehouseExpandedDescriptionLabel": "Description",
+    "treehouseExpandedTopicsLabel": "Topics",
+    "treehouseExpandedTopics": [
+      "Responsive Web Design",
+      "JavaScript Algorithms & Data Structures",
+      "Front End Libraries",
+      "API´s and microservices",
+      "Unity",
+      "SQL"
+    ],
+    "treehouseExpandedDateCompletedLabel": "Completed on",
+    "treehouseExpandedDateCompleted": "December 25, 2018",
+    "treehouseExpandedLinkText": "Website",
+
+    "udemyTitle": "Frontend Course",
+    "udemySubheader": "November 24, 2020",
+    "udemyInstitution": "Udemy",
+    "udemyDesc": "Online Frontend React course. Hooks, ES6, Firebase, NextJS, API, GatsbyJS, GraphQl, localStorage, Heroku, Netlify, Git, Visual Studio Code",
+    "udemyExpandedTitle": "Front End React Development Course",
+    "udemyExpandedDesc": "Udemy.com offers paid developer courses.",
+    "udemyExpandedDescriptionLabel": "Description",
+    "udemyExpandedTopicsLabel": "Topics",
+    "udemyExpandedTopics": [
+      "ReactJS - React Hooks",
+      "API management and configuration inside React",
+      "React frameworks such as GatsbyJS and NextJS",
+      "Deployment to Netlify (frontend) and Heroku (backend)",
+      "Configuration and usage of browser Devtools.",
+      "Redux - Redux-Hooks - Store"
+    ],
+    "udemyExpandedDateCompletedLabel": "Completed on",
+    "udemyExpandedDateCompleted": "November 24, 2020",
+    "udemyExpandedLinkText": "Website",
+
+    "businessTitle": "Business Administration",
+    "businessSubheader": "June 30, 2012",
+    "businessInstitution": "Universidad Andina del Cusco",
+    "businessDesc": "Business Management University Degree, four years long and graduated with Thesis. Member of diverse study groups.",
+    "businessExpandedTitle": "Business Administration Degree",
+    "businessExpandedDesc": "Universidad Andina del Cusco is one of the biggest universities in Cusco.",
+    "businessExpandedDescriptionLabel": "Description",
+    "businessExpandedTopicsLabel": "Topics",
+    "businessExpandedTopics": [
+      "Business Management",
+      "Organization",
+      "Planification",
+      "Human Resources",
+      "Operations",
+      "Finances"
+    ],
+    "businessExpandedDateCompletedLabel": "Completed on",
+    "businessExpandedDateCompleted": "June 30, 2012",
+    "businessExpandedLinkText": "University Repository",
+
+    "toeflTitle": "TOEFL",
+    "toeflSubheader": "October 12, 2019",
+    "toeflInstitution": "Test of English as a Foreign Language",
+    "toeflDesc": "International English Exam, taken on October 12, 2019. Score 87 C-1",
+    "toeflExpandedTitle": "TOEFL",
+    "toeflExpandedDesc": "Authorized to administer international English exams at the American-Peruvian Cultural Institute (ICPNA-Cusco).",
+    "toeflExpandedDescriptionLabel": "Description",
+    "toeflExpandedTopicsLabel": "Topics",
+    "toeflExpandedTopics": ["English"],
+    "toeflExpandedDateCompletedLabel": "Completed on",
+    "toeflExpandedDateCompleted": "October 12, 2019",
+    "toeflExpandedLinkText": "Website",
+
+    "germanTitle": "German Language",
+    "germanSubheader": "Ongoing",
+    "germanInstitution": "ACUPARI - German Peruvian Institut",
+    "germanDesc": "Ongoing German language studies, currently on level B1.1",
+    "germanExpandedTitle": "German Language",
+    "germanExpandedDesc": "ACUPARI is renewed place to learn German online",
+    "germanExpandedDescriptionLabel": "Description",
+    "germanExpandedTopicsLabel": "Topics",
+    "germanExpandedTopics": ["German"],
+    "germanExpandedDateCompletedLabel": "Completed on",
+    "germanExpandedDateCompleted": "Ongoing",
+    "germanExpandedLinkText": "Website"
+  }
+}

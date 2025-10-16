@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Box } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { useTranslation } from "react-i18next";
 
 const GitRepoLink = () => {
+  const { t } = useTranslation();
   return (
     <Box
       className="gitrepo"
@@ -22,7 +24,9 @@ const GitRepoLink = () => {
           margin: { xs: 3, md: 5 },
         }}
       >
-        <h3 style={{ fontSize: "1.2rem", marginBottom: "12px" }}>Link to the GitHub Repository</h3>
+        <h3 style={{ fontSize: "1.2rem", marginBottom: "12px" }}>
+          {t("portfolioRepoLink.title")}
+        </h3>
         <Button
           variant="contained"
           href="https://github.com/manuepeva"
@@ -38,7 +42,7 @@ const GitRepoLink = () => {
             borderRadius: "4vh",
           }}
         >
-          Go to GitHub
+          {t("portfolioRepoLink.goTo")}
         </Button>
       </Box>
     </Box>

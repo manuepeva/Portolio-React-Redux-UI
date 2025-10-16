@@ -3,11 +3,19 @@ import { useDispatch } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
 import { sendFormData } from "../../Redux/SendFormAction";
 
-import { Box, Button, TextField, Typography, Alert, Stack } from "@mui/material";
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  Alert,
+  Stack,
+} from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const Form = () => {
   const dispatch = useDispatch();
-
+  const { t } = useTranslation();
   // React Hook Form
   const {
     handleSubmit,
@@ -45,7 +53,7 @@ const Form = () => {
         }}
       >
         <Typography variant="h5" gutterBottom>
-          Please Enter Your Information
+          {t("form.title")}
         </Typography>
 
         <Stack spacing={2}>
@@ -53,11 +61,11 @@ const Form = () => {
           <Controller
             name="firstName"
             control={control}
-            rules={{ required: "First name is required" }}
+            rules={{ required: t("form.firstNameRequired") }}
             render={({ field }) => (
               <TextField
                 {...field}
-                label="First Name"
+                label={t("form.name")}
                 fullWidth
                 error={!!errors.firstName}
                 helperText={errors.firstName?.message}
@@ -69,11 +77,11 @@ const Form = () => {
           <Controller
             name="lastName"
             control={control}
-            rules={{ required: "Last name is required" }}
+            rules={{ required: t("form.lastNameRequired") }}
             render={({ field }) => (
               <TextField
                 {...field}
-                label="Last Name"
+                label={t("form.lastName")}
                 fullWidth
                 error={!!errors.lastName}
                 helperText={errors.lastName?.message}
@@ -85,12 +93,12 @@ const Form = () => {
           <Controller
             name="email"
             control={control}
-            rules={{ required: "Email is required" }}
+            rules={{ required: t("form.emailRequired") }}
             type="email"
             render={({ field }) => (
               <TextField
                 {...field}
-                label="Email"
+                label={t("form.email")}
                 fullWidth
                 error={!!errors.email}
                 helperText={errors.email?.message}
@@ -102,12 +110,12 @@ const Form = () => {
           <Controller
             name="date"
             control={control}
-            rules={{ required: "Date is required" }}
+            rules={{ required: t("form.dateRequired") }}
             render={({ field }) => (
               <TextField
                 {...field}
                 type="date"
-                label="Date"
+                label={t("form.date")}
                 fullWidth
                 InputLabelProps={{ shrink: true }}
                 error={!!errors.date}
@@ -121,17 +129,23 @@ const Form = () => {
             name="comments"
             control={control}
             render={({ field }) => (
-              <TextField {...field} label="Comments" fullWidth multiline rows={4} />
+              <TextField
+                {...field}
+                label={t("form.comments")}
+                fullWidth
+                multiline
+                rows={4}
+              />
             )}
           />
         </Stack>
 
         <Button type="submit" variant="contained" color="primary">
-          Send
+          {t("form.send")}
         </Button>
 
         {isSubmitSuccessful && (
-          <Alert severity="success">Your message was successfully sent!</Alert>
+          <Alert severity="success">{t("form.success")}</Alert>
         )}
       </Box>
     </Box>

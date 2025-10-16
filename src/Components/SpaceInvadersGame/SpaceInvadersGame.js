@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./SpaceInvadersGame.scss";
 import { Box, Button, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const WIDTH = 15;
 const HEIGHT = 15;
 const TOTAL = WIDTH * HEIGHT;
 
 export default function SpaceInvadersGame() {
+  const { t } = useTranslation();
   const [shooter, setShooter] = useState(TOTAL - Math.ceil(WIDTH / 2));
   const [invaders, setInvaders] = useState([]);
   const [lasers, setLasers] = useState([]);
@@ -102,7 +104,10 @@ export default function SpaceInvadersGame() {
   useEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect */
     if (!isRunning) return;
-    if (invaders.includes(shooter) || invaders.some((i) => i >= TOTAL - WIDTH)) {
+    if (
+      invaders.includes(shooter) ||
+      invaders.some((i) => i >= TOTAL - WIDTH)
+    ) {
       setGameOver(true);
       setIsRunning(false);
     }
@@ -115,12 +120,15 @@ export default function SpaceInvadersGame() {
   return (
     <Box className="battle-container">
       <Typography variant="h3">
-        Space Invaders - Score: {score} {gameOver && <span className="gameover"> GAME OVER</span>}
+        Space Invaders - {t("spaceInvaders.score")} {score}{" "}
+        {gameOver && (
+          <span className="gameover">{t("spaceInvaders.gameOver")}</span>
+        )}
       </Typography>
 
       {!isRunning && !gameOver && (
         <Button variant="contained" className="start-btn" onClick={startGame}>
-          ▶ Start Game
+          ▶ {t("spaceInvaders.startGame")}
         </Button>
       )}
 
@@ -143,18 +151,28 @@ export default function SpaceInvadersGame() {
           className="start-btn"
           onClick={startGame}
         >
-          🔄 Restart
+          🔄 {t("spaceInvaders.restart")}
         </Button>
       )}
 
       {/* Controles táctiles */}
       {isRunning && (
         <Box className="controls">
-          <Button onClick={() => shooter % WIDTH !== 0 && setShooter((s) => s - 1)}>⬅️</Button>
-          <Button onClick={() => shooter % WIDTH !== WIDTH - 1 && setShooter((s) => s + 1)}>
+          <Button
+            onClick={() => shooter % WIDTH !== 0 && setShooter((s) => s - 1)}
+          >
+            ⬅️
+          </Button>
+          <Button
+            onClick={() =>
+              shooter % WIDTH !== WIDTH - 1 && setShooter((s) => s + 1)
+            }
+          >
             ➡️
           </Button>
-          <Button onClick={() => setLasers((prev) => [...prev, shooter])}>🔫 Shoot!</Button>
+          <Button onClick={() => setLasers((prev) => [...prev, shooter])}>
+            🔫 {t("spaceInvaders.shoot")}
+          </Button>
         </Box>
       )}
     </Box>

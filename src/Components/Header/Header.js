@@ -5,6 +5,7 @@ import NavigationBar from "../NavigationBar/NavigationBar";
 import { clickOverLogo } from "../../Redux/LogoEventAction";
 import logo from "../../../utils/img/mpv.png";
 import ham from "../../../utils/img/ham.png";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -48,6 +49,7 @@ const Header = () => {
         >
           <img src={logo} alt="Logo MPV" />
         </button>
+        <LanguageSelector />
         <button
           onClick={handleClickToggle}
           className="button-menu"

@@ -1,12 +1,19 @@
 import React from "react";
-import { Grid, Card, CardMedia, CardContent, Typography, Box, Link } from "@mui/material";
-import { projects } from "./utils";
+import {
+  Grid,
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Box,
+  Link,
+} from "@mui/material";
 
-const ProjectsSection = () => {
+const ProyectsSection = ({ proyects }) => {
   return (
     <Box sx={{ py: 8, px: { xs: 2, sm: 4, md: 7 } }}>
       <Grid container spacing={8} justifyContent="center">
-        {projects.map((proj, idx) => (
+        {proyects.map((proj, idx) => (
           <Grid item xs={12} sm={6} md={6} key={idx}>
             <Card
               sx={{
@@ -45,4 +52,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection;
+export default ProyectsSection;

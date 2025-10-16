@@ -1,9 +1,9 @@
 import React from "react";
-import ProjectsSection from "../ProjectsSection/ProjectsSection";
 import ContactCallToAction from "../ContactCallToAction/ContactCallToAction";
 import HeroSection from "../HeroSection/HeroSection";
 import SpaceInvadersGame from "../SpaceInvadersGame/SpaceInvadersGame";
 import PortfolioRepoLink from "../PortfolioRepoLink/PortfolioRepoLink";
+import ProyectsTranslator from "../ProyectsSection/ProyectsTranslator";
 
 const Login = () => {
   return (
@@ -14,7 +14,7 @@ const Login = () => {
       <div className="space-invaders-section">
         <SpaceInvadersGame />
       </div>
-      <ProjectsSection />
+      <ProyectsTranslator />
       <PortfolioRepoLink />
       <ContactCallToAction />
     </div>

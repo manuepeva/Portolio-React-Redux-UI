@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "title": "Développeur Frontend",
+    "subtitle": "Salut, je suis Manuel. Je développe & construis avec ReactJS"
+  },
+  "contactCTA": {
+    "contactMe": "Contactez-moi",
+    "email": "Email"
+  },
+  "footer": {
+    "name": "Manuel Pérez",
+    "role": "Développeur Front End",
+    "zip": "ZIP 15047",
+    "location": "Lima Pérou",
+    "projects": "Projets",
+    "education": "Éducation",
+    "locationLink": "Localisation",
+    "contact": "Contact",
+    "github": "Github",
+    "netlify": "Netlify",
+    "heroku": "Heroku",
+    "stackoverflow": "Stack Over Flow"
+  },
+  "projectsSection": {
+    "weatherApiTitle": "API Météo",
+    "weatherApiDesc": "Objectif : Fournir une interface où l'utilisateur peut rechercher une ville et un pays et obtenir la météo actuelle.",
+    "cryptoApiTitle": "API Crypto-monnaie",
+    "cryptoApiDesc": "Objectif : Fournir une interface où l'utilisateur peut rechercher sa crypto-monnaie préférée et obtenir sa valeur actuelle.",
+    "drinksApiTitle": "API Boissons",
+    "drinksApiDesc": "Objectif : Fournir une interface où l'utilisateur peut rechercher ses boissons préférées.",
+    "carInsuranceApiTitle": "API Assurance Auto",
+    "carInsuranceApiDesc": "Objectif : Fournir une interface où l'utilisateur peut rechercher une assurance auto."
+  },
+  "portfolioRepoLink": {
+    "title": "Lien vers le dépôt GitHub du portfolio",
+    "goTo": "Aller sur GitHub"
+  },
+  "form": {
+    "title": "Veuillez entrer vos informations",
+    "name": "Nom",
+    "firstNameRequired": "Le prénom est requis",
+    "lastName": "Nom de famille",
+    "lastNameRequired": "Le nom de famille est obligatoire",
+    "email": "Email",
+    "emailRequired": "L’e-mail est obligatoire",
+    "date": "Date",
+    "dateRequired": "La date est obligatoire",
+    "comments": "Commentaires",
+    "send": "Envoyer",
+    "success": "Votre message a été envoyé avec succès",
+    "error": "Veuillez entrer votre nom, nom de famille et date"
+  },
+  "spaceInvaders": {
+    "score": "Score",
+    "gameOver": "FIN DE PARTIE",
+    "startGame": "Démarrer le jeu",
+    "shoot": "Tire !",
+    "restart": "Redémarrer"
+  },
+  "errorBoundary": {
+    "somethingWentWrong": "Une erreur s'est produite."
+  },
+  "proyectsPage": "Aller au dépôt",
+  "navigation": {
+    "projects": "Projets",
+    "education": "Éducation",
+    "location": "Localisation",
+    "contact": "Contact"
+  },
+  "locationPage": {
+    "cuscoTitle": "Cusco",
+    "cuscoDesc": "La ville de Cusco a été fondée par les Espagnols le 23 mars 1534, étant également le lieu le plus important pour l'Empire Inca. Elle est située à 3 339 m d'altitude.",
+    "limaTitle": "Lima",
+    "limaDesc": "Lima est la capitale du Pérou et est située dans la partie centrale de la côte du pays, face à l'océan Pacifique. C'est la plus grande ville du Pérou et l'une des plus grandes d'Amérique du Sud.",
+    "peruTitle": "Pérou",
+    "peruDesc": "Le Pérou est situé sur la côte ouest de l'océan Pacifique, en Amérique du Sud. Il était le centre du plus grand empire qui a régné sur cette partie de la Terre, l'Empire Inca, couvrant environ 800 000 km².",
+    "germanyTitle": "Allemagne",
+    "germanyDesc": "Bad Liebenzell est située dans le sud-ouest de l'Allemagne, au cœur de la magnifique Forêt-Noire. Cette charmante ville thermale combine une architecture historique avec de beaux paysages naturels, dont des forêts denses, des collines et des rivières claires."
+  },
+  "educationPage": {
+    "frontendTitle": "Développeur Frontend",
+    "frontendSubheader": "23 août 2017",
+    "frontendInstitution": "FreeCodeCamp Université",
+    "frontendDesc": "Certification de Développeur Frontend - 400 heures. JavaScript - Algorithmes - Bibliothèques - CSS - API HTML - Github",
+    "frontendExpandedTitle": "Certification en ligne de Développeur Frontend",
+    "frontendExpandedDesc": "Il s'agit d'une organisation à but non lucratif (ID fédéral américain : 820779546), qui propose des cours de développement en ligne gratuits.",
+    "frontendExpandedDescriptionLabel": "Description",
+    "frontendExpandedTopicsLabel": "Sujets",
+    "frontendExpandedTopics": [
+      "Conception Web Responsive",
+      "Algorithmes et structures de données JavaScript",
+      "Bibliothèques Front End",
+      "APIs et microservices"
+    ],
+    "frontendExpandedDateCompletedLabel": "Terminé le",
+    "frontendExpandedDateCompleted": "23 août 2017",
+    "frontendExpandedLinkText": "Certificat",
+
+    "treehouseTitle": "Cours Frontend",
+    "treehouseSubheader": "25 décembre 2018",
+    "treehouseInstitution": "TeamTreeHouse",
+    "treehouseDesc": "Cours en ligne de Développeur Frontend. HTML - JavaScript - CSS - Unity - Java - SQL - API - PhP",
+    "treehouseExpandedTitle": "Cours de Développement Frontend",
+    "treehouseExpandedDesc": "Team Tree House est une organisation qui propose des cours de développement payants.",
+    "treehouseExpandedDescriptionLabel": "Description",
+    "treehouseExpandedTopicsLabel": "Sujets",
+    "treehouseExpandedTopics": [
+      "Conception Web Responsive",
+      "Algorithmes et structures de données JavaScript",
+      "Bibliothèques Front End",
+      "APIs et microservices",
+      "Unity",
+      "SQL"
+    ],
+    "treehouseExpandedDateCompletedLabel": "Terminé le",
+    "treehouseExpandedDateCompleted": "25 décembre 2018",
+    "treehouseExpandedLinkText": "Site web",
+
+    "udemyTitle": "Cours Frontend",
+    "udemySubheader": "24 novembre 2020",
+    "udemyInstitution": "Udemy",
+    "udemyDesc": "Cours en ligne de React Frontend. Hooks, ES6, Firebase, NextJS, API, GatsbyJS, GraphQl, localStorage, Heroku, Netlify, Git, Visual Studio Code",
+    "udemyExpandedTitle": "Cours de Développement Frontend React",
+    "udemyExpandedDesc": "Udemy.com propose des cours de développement payants.",
+    "udemyExpandedDescriptionLabel": "Description",
+    "udemyExpandedTopicsLabel": "Sujets",
+    "udemyExpandedTopics": [
+      "ReactJS - React Hooks",
+      "Gestion et configuration des API dans React",
+      "Frameworks React tels que GatsbyJS et NextJS",
+      "Déploiement sur Netlify (frontend) et Heroku (backend)",
+      "Configuration et utilisation des Devtools du navigateur.",
+      "Redux - Redux-Hooks - Store"
+    ],
+    "udemyExpandedDateCompletedLabel": "Terminé le",
+    "udemyExpandedDateCompleted": "24 novembre 2020",
+    "udemyExpandedLinkText": "Site web",
+
+    "businessTitle": "Administration des Affaires",
+    "businessSubheader": "30 juin 2012",
+    "businessInstitution": "Universidad Andina del Cusco",
+    "businessDesc": "Diplôme universitaire en gestion d'entreprise, quatre ans et diplômé avec une thèse. Membre de divers groupes d'étude.",
+    "businessExpandedTitle": "Diplôme en Administration des Affaires",
+    "businessExpandedDesc": "L'Universidad Andina del Cusco est l'une des plus grandes universités de Cusco.",
+    "businessExpandedDescriptionLabel": "Description",
+    "businessExpandedTopicsLabel": "Sujets",
+    "businessExpandedTopics": [
+      "Gestion d'entreprise",
+      "Organisation",
+      "Planification",
+      "Ressources humaines",
+      "Opérations",
+      "Finances"
+    ],
+    "businessExpandedDateCompletedLabel": "Terminé le",
+    "businessExpandedDateCompleted": "30 juin 2012",
+    "businessExpandedLinkText": "Dépôt universitaire",
+
+    "toeflTitle": "TOEFL",
+    "toeflSubheader": "12 octobre 2019",
+    "toeflInstitution": "Test of English as a Foreign Language",
+    "toeflDesc": "Examen international d'anglais, passé le 12 octobre 2019. Score 87 C-1",
+    "toeflExpandedTitle": "TOEFL",
+    "toeflExpandedDesc": "Autorisé à administrer des examens internationaux d'anglais à l'Institut Culturel Américano-Péruvien (ICPNA-Cusco).",
+    "toeflExpandedDescriptionLabel": "Description",
+    "toeflExpandedTopicsLabel": "Sujets",
+    "toeflExpandedTopics": ["Anglais"],
+    "toeflExpandedDateCompletedLabel": "Terminé le",
+    "toeflExpandedDateCompleted": "12 octobre 2019",
+    "toeflExpandedLinkText": "Site web",
+
+    "germanTitle": "Langue Allemande",
+    "germanSubheader": "En cours",
+    "germanInstitution": "ACUPARI - Institut Péruvien Allemand",
+    "germanDesc": "Études de langue allemande en cours, actuellement au niveau B1.1",
+    "germanExpandedTitle": "Langue Allemande",
+    "germanExpandedDesc": "ACUPARI est un lieu reconnu pour apprendre l'allemand en ligne",
+    "germanExpandedDescriptionLabel": "Description",
+    "germanExpandedTopicsLabel": "Sujets",
+    "germanExpandedTopics": ["Allemand"],
+    "germanExpandedDateCompletedLabel": "En cours",
+    "germanExpandedDateCompleted": "En cours",
+    "germanExpandedLinkText": "Site web"
+  }
+}

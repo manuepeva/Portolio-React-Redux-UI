@@ -11,8 +11,10 @@ import {
   Link,
 } from "@mui/material";
 import { secrets } from "../../../secrets/secrets";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -56,8 +58,8 @@ const Projects = () => {
               <CardActionArea>
                 <CardContent
                   sx={{
-                    wordBreak: "break-word", // permite cortar palabras largas
-                    overflowWrap: "break-word", // soporte adicional
+                    wordBreak: "break-word",
+                    overflowWrap: "break-word",
                   }}
                 >
                   <Typography gutterBottom variant="h5" component="div">
@@ -71,7 +73,7 @@ const Projects = () => {
               <CardActions>
                 <Button size="small" color="primary">
                   <Link href={repo.clone_url} target="_blank" rel="noopener">
-                    Go to Repository
+                    {t("proyectsPage")}
                   </Link>
                 </Button>
               </CardActions>

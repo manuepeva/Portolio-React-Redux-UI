@@ -11,9 +11,8 @@ import {
   Modal,
 } from "@mui/material";
 import { red } from "@mui/material/colors";
-import locations from "./utils";
 
-const LocationPage = () => {
+const LocationPage = ({ locations }) => {
   const [modalOpen, setModalOpen] = React.useState(false);
   const [modalImage, setModalImage] = React.useState("");
   const [zoom, setZoom] = React.useState(false);
@@ -42,7 +41,9 @@ const LocationPage = () => {
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{ maxWidth: 345, margin: "0 auto" }}>
               <CardHeader
-                avatar={<Avatar sx={{ bgcolor: red[500] }}>{loc.avatar}</Avatar>}
+                avatar={
+                  <Avatar sx={{ bgcolor: red[500] }}>{loc.avatar}</Avatar>
+                }
                 title={loc.title}
               />
               <CardMedia
